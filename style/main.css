@@ -1,0 +1,114 @@
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*    background:#015249;*/
+    background-image: url("galaxy.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+
+body {
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color: #545454;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2em 2em 10em;
+}
+
+/* top navigation bar */
+ul.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top:0;
+    opacity: 0.7;
+}
+
+ul.navigation:hover {
+    opacity: 1.0;
+}
+
+ul.navigation li {
+    float: right;
+/*    border-right: 2px solid #77C9D4;*/
+}
+
+/* block link tab stuff */
+ul.navigation li a {
+    color: #77C9D4;
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20 px;
+}
+
+ul.navigation li a:hover {
+    background-color: #77C9D4;
+    color: #FFF;
+}
+
+/* the good stuff */
+h1 {
+    color:#57BC90;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+}
+
+p.objective {
+    color:#A5A5AF;
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;    
+}
+
+p {
+/*
+    color:dimgrey;
+    border:5px solid bisque;
+    padding: 30px;
+    text-indent: 100px;
+*/
+    font-size: 30px;
+    padding: 30px;
+    border:5px solid #57BC90;
+}
+
+a {
+    color: #6aa7e8;
+    text-decoration: none;
+}
+
+img {
+/*    animation: fade 2s cubic-bezier(0, 0, .78, .36) 1;*/
+    background: transparent;
+    border: 10px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: block;
+    margin: 1.3em auto;
+    max-width: 95%;
+}
+
+@keyframes fade {
+    from {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    to {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+}
