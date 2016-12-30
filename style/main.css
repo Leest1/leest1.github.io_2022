@@ -33,9 +33,14 @@
 }
 
 @media screen and (max-width: 485px) {
-    ul li:not(.menuIcon):not(:first-child) { display: none; }
-    ul li.menuIcon a {
+    ul.navigation li:not(.menuIcon):not(:first-child) { display: none; }
+    ul.navigation li.menuIcon a{
+/*        display: inline-block;*/
         visibility: visible;
+    }
+    
+    ul.navigation li.menuIcon a:hover div.dropMenu {
+        display: inline-block;
     }
 }
 
@@ -107,11 +112,37 @@ ul.navigation li a:hover {
 
 ul.navigation li a:active {
     background-color: #77C9D4;
-    color:#FFF;
+    color:#77C9D4;
 }
 
+/* small menu stuff */
 ul.navigation li.menuIcon {
-    visibility:hidden;
+/*    display: none;*/
+    visibility: hidden;
+    cursor: pointer;
+}
+
+div.dropMenu {
+    font-family: "brandonGrotesque";
+    position: fixed;
+    
+    background-color: #FFF;
+    border: 1px solid #77C9D4;
+    
+    position: fixed;
+    display: none;
+}
+
+div.dropMenu a {
+    color: #77C9D4;
+    padding: 12px 16px;
+    border: 1px solid #77C9D4;
+    display: block;
+}
+
+div.dropMenu a:hover {
+    color: #FFF;
+    background-color: #77C9D4;
 }
 
 /* the good stuff */
