@@ -28,9 +28,9 @@ working fonts
 }
 
 @media screen and (max-width: 485px) {
-    ul.navigation li:not(.menuIcon):not(:first-child) { display: none; }
+    ul.navigation li:not(.drop):not(:first-child) { display: none; }
 
-    ul.navigation div.drop {
+    ul.navigation li.drop {
         visibility: visible;
     }
 }
@@ -61,13 +61,6 @@ body {
     width: 100%;
     left: 0;
 }
-
-/*
-#navigation:hover {
-    animation: opaque 0.35s cubic-bezier(0, 0.70, 1, 1) 1;
-    opacity: 1.0;
-}
-*/
 
 ul.navigation {
     list-style-type: none;
@@ -109,24 +102,23 @@ ul.navigation li a:active {
 
 /* small dropdown menu stuff */
 
-div.drop {
-    position: fixed;
+li.drop {
+    position:fixed;
     display: inline-block;
-    visibility: hidden;
-    right: 0;
+    right:0;
+    visibility:hidden;
 }
 
-div.drop:hover div.dropMenu {
+li.drop:hover div.dropMenu {
     display: block;
 }
 
 div.dropMenu {
     font-family: "brandonGrotesque";
-    position: absolute;
-    
+    position:absolute;
     background-color: #FFF;
     border: 1px solid #77C9D4;
-    border-bottom: none;
+    border-right: none;
     
     min-width: 130px;
     display: none;
@@ -136,7 +128,8 @@ div.dropMenu {
 div.dropMenu a {
     color: #77C9D4;
     padding: 12px 16px;
-    border-bottom: 1px solid #77C9D4;
+    text-decoration: none;
+    border-right: 1px solid #77C9D4;
     display: block;
 }
 
