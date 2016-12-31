@@ -1,5 +1,11 @@
 @import url("themify-icons.css");
-/*@import url("./ostrich-sans/ostrich-sans.css");*/
+@import url("./ostrich-sans/ostrich-sans.css");
+/* stuff i want to do: 
+navigation bar disappear when scrolling
+scroll on click
+gradient background
+working fonts
+*/
 
 /* custom stuff */
 @font-face {
@@ -22,29 +28,34 @@
     src: url(themify.TTF);
 }
 
+@keyframes opaque {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
 @media screen and (max-width: 485px) {
     ul.navigation li:not(.menuIcon):not(:first-child) { display: none; }
 
     ul.navigation div.drop {
         visibility: visible;
     }
-    
-    ul.navigation li.menuIcon a:hover div.dropMenu {
-        background-color: black;
-    }
 }
 
 /* framework */
 html {
-    /*    background:#015249;*/
-    background-image: url("galaxy.jpg");
+/*    background-image: url("galaxy.jpg");*/
     background-size: cover;
     background-attachment: fixed;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #9EE6EF 50%, rgba(255,255, 255, 0) 100%);
 }
 
 body {
     background: #fff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
     color: #545454;
     font-size: 16px;
     line-height: 1.5;
@@ -73,10 +84,11 @@ ul.navigation {
     overflow: hidden;
     
     background-color: #FFF;
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 ul.navigation:hover {
+    animation: opaque 0.15s cubic-bezier(0, 0.70, 1, 1) 1;
     opacity: 1.0;
 }
 
@@ -105,9 +117,6 @@ ul.navigation li a:active {
 }
 
 /* small dropdown menu stuff */
-ul.navigation li.menuIcon {
-    cursor: pointer;
-}
 
 div.drop {
     position: fixed;
@@ -126,6 +135,7 @@ div.dropMenu {
     
     background-color: #FFF;
     border: 1px solid #77C9D4;
+    border-bottom: none;
     
     min-width: 130px;
     display: none;
@@ -135,7 +145,7 @@ div.dropMenu {
 div.dropMenu a {
     color: #77C9D4;
     padding: 12px 16px;
-    border: 1px solid #77C9D4;
+    border-bottom: 1px solid #77C9D4;
     display: block;
 }
 
@@ -155,12 +165,20 @@ h1 {
 
 p {
     font-family: "deliHeavy";
+    font-size: 15px;
+    padding: 30px 30px 300px;
+    border:5px double #57BC90;
+    border-radius: 4px 15px 15px;
+    
+    word-wrap: break-word;
+}
+
+p.head {
     color:dimgrey;
     font-size: 30px;
-    padding: 50px;
-    border:5px double #57BC90;
-    border-radius: 10px;
-    
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
 }
 
 p.about {
@@ -170,12 +188,6 @@ p.about {
     padding: 0px;
 }
 
-p.head {
-    padding: 0px;
-    border: none;
-    border-radius: 0px;
-}
-
 a {
     color: #6aa7e8;
     text-decoration: none;
@@ -183,43 +195,32 @@ a {
 
 /* block settings */
 #about {
-    padding: 50px;
-    border: 2px dotted #57BC90;
+    padding: 0px 25px 100px;
+    border: 1px dashed #57BC90;
 }
 
 #portfolio {
-    padding: 50px;
-    border: 2px dotted #57BC90;
+    padding: 0px 25px 100px;
+    border: 1px dashed #57BC90;
 }
 
 #contact {
-    padding: 50px;
-    border: 2px dotted #57BC90;
+    padding: 0px 25px 100px;
+    border: 1px dashed #57BC90;
 }
 
 /* bottom info block stuff */
 #bottom {
-    border: 5px double #FFF;
-    background-color: #57BC90;
+    border-top: 1px dashed #77C9D4;
+    background-color: #FFF;
     position: absolute;
     width: 100%;
-    padding: 40px;
+    padding: 60px;
 /*    bottom: 0;*/
     left: 0;
 }
 
 /* idk what to do with this lmao saving it for later
-@keyframes appear {
-    to {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-    from {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-    }
-}
-
 img {
     animation: appear 2s cubic-bezier(0, 0, .78, .36) 1;
     background: transparent;
