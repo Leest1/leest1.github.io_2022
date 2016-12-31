@@ -1,4 +1,5 @@
 @import url("themify-icons.css");
+/*@import url("./ostrich-sans/ostrich-sans.css");*/
 
 /* custom stuff */
 @font-face {
@@ -21,32 +22,20 @@
     src: url(themify.TTF);
 }
 
-@keyframes appear {
-    to {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-    from {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-    }
-}
-
 @media screen and (max-width: 485px) {
     ul.navigation li:not(.menuIcon):not(:first-child) { display: none; }
-    ul.navigation li.menuIcon a{
-/*        display: inline-block;*/
+
+    ul.navigation div.drop {
         visibility: visible;
     }
     
     ul.navigation li.menuIcon a:hover div.dropMenu {
-        display: inline-block;
+        background-color: black;
     }
 }
 
 /* framework */
 html {
-/*    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     /*    background:#015249;*/
     background-image: url("galaxy.jpg");
     background-size: cover;
@@ -115,22 +104,32 @@ ul.navigation li a:active {
     color:#77C9D4;
 }
 
-/* small menu stuff */
+/* small dropdown menu stuff */
 ul.navigation li.menuIcon {
-/*    display: none;*/
-    visibility: hidden;
     cursor: pointer;
+}
+
+div.drop {
+    position: fixed;
+    display: inline-block;
+    visibility: hidden;
+    right: 0;
+}
+
+div.drop:hover div.dropMenu {
+    display: block;
 }
 
 div.dropMenu {
     font-family: "brandonGrotesque";
-    position: fixed;
+    position: absolute;
     
     background-color: #FFF;
     border: 1px solid #77C9D4;
     
-    position: fixed;
+    min-width: 130px;
     display: none;
+    right: 0;
 }
 
 div.dropMenu a {
@@ -145,7 +144,7 @@ div.dropMenu a:hover {
     background-color: #77C9D4;
 }
 
-/* the good stuff */
+/* the good stuff information and things */
 h1 {
     color:#57BC90;
     font-family: "deliSC";
@@ -154,20 +153,27 @@ h1 {
     text-align: center;
 }
 
-p.objective {
+p {
+    font-family: "deliHeavy";
+    color:dimgrey;
+    font-size: 30px;
+    padding: 50px;
+    border:5px double #57BC90;
+    border-radius: 10px;
+    
+}
+
+p.about {
     font-size: 25px;
     text-align: center;
     border: none;
     padding: 0px;
 }
 
-p {
-    font-family: "deliHeavy";
-    color:dimgrey;
-    font-size: 30px;
-    padding: 20px;
-    border:5px double #57BC90;
-    border-radius: 100px;
+p.head {
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
 }
 
 a {
@@ -175,24 +181,45 @@ a {
     text-decoration: none;
 }
 
+/* block settings */
 #about {
+    padding: 50px;
+    border: 2px dotted #57BC90;
 }
 
 #portfolio {
+    padding: 50px;
+    border: 2px dotted #57BC90;
 }
 
 #contact {
+    padding: 50px;
+    border: 2px dotted #57BC90;
 }
 
+/* bottom info block stuff */
 #bottom {
-    border: 5px double #57BC90;
-    position:;
+    border: 5px double #FFF;
+    background-color: #57BC90;
+    position: absolute;
     width: 100%;
-    bottom: 0;
+    padding: 40px;
+/*    bottom: 0;*/
     left: 0;
 }
 
-/*
+/* idk what to do with this lmao saving it for later
+@keyframes appear {
+    to {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+    from {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+}
+
 img {
     animation: appear 2s cubic-bezier(0, 0, .78, .36) 1;
     background: transparent;

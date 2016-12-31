@@ -17,34 +17,37 @@
             <li><a href="#about">ABOUT ME</a></li>
             <li><a href="#">HOME</a></li>
             
-            <li class="menuIcon"><a href="#"><span class="ti-menu"></span></a></li>
+            <div class="drop">
+                <li class="menuIcon"><a><span class="ti-menu"></span></a></li>
+                <div class=dropMenu>
+                        <a href="#about">ABOUT ME</a>
+                        <a href="#portfolio">PORTFOLIO</a>
+                        <a href="#contact">CONTACT</a>
+                </div>
+            </div>
         </ul>
-        <div class=dropMenu>
-                <a href="#">HOME</a>
-                <a href="#about">ABOUT ME</a>
-                <a href="#portfolio">PORTFOLIO</a>
-                <a href="#contact">CONTACT</a>
-        </div>
+        
+        
     </div>
     
     <body>
         <div id="start">
+            <h1>Shannon Lee</h1>
         </div>
         
         <div id="about">
-            <h1>Shannon Lee</h1>
-<!--            <p class="objective">3rd year Computer Science major at University of California, Irvine</p>-->
-            <p><span class="ti-user"></span>    about</p>
+            <p class="head"><span class="ti-user"></span> about</p>
             <p>test</p>
+<!--            <p class="about">3rd year Computer Science major at University of California, Irvine</p>-->
         </div>
         
         <div id="portfolio">
-            <p><span class="ti-folder"></span>  portfolio</p>
+            <p class="head"><span class="ti-folder"></span> portfolio</p>
             <p>test</p>
         </div>
         
         <div id="contact">
-            <p><span class="ti-email"></span>   contact</p>
+            <p class="head"><span class="ti-email"></span> contact</p>
             <p>test</p>
         </div>
         
@@ -60,6 +63,8 @@
     </body>
     
     <div id="bottom">
-        <h1>helo</h1>
+        <div class=aboutBottom></div>
+        <div class=socialBottom></div>
+        <h1 style=color:#FFF>info stuff</h1>
     </div>
 </html>
