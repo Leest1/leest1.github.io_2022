@@ -57,3 +57,9 @@ $(document).ready( function() {
         }
     });
 });
+
+// slide down header animation
+$( function() {
+    $("header").delay(1400).animate({opacity:0, textAlign:left},"slow");
+//    $("section").delay(2000).animate({opacity:1, textAlign:left},"slow");
+});

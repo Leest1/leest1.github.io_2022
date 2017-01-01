@@ -1,21 +1,41 @@
 @import url("themify-icons.css");
 @import url("./ostrich-sans/ostrich-sans.css");
 /* stuff i want to do:
-scroll on click
-gradient background
+scroll on button click
 working fonts
 */
 
 /* custom stuff */
+/*
 @font-face {
     font-family: brandonGrotesque;
-    src: url(Brandon_reg.OTF);
+    src: url(Brandon_reg.OTF) format ("otf");
 	font-style: normal;
 }
 
 @font-face {
     font-family: deliHeavy;
-    src: url(Delicious-Heavy.OTF);
+    src: url(Delicious-Heavy.OTF) format ("otf");
+}
+*/
+
+
+@font-face {
+    font-family: 'brandonGrotesque';
+    src: url('brandon_reg-webfont.woff2') format('woff2'),
+         url('brandon_reg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'deliHeavy';
+    src: url('delicious-heavy-webfont.woff2') format('woff2'),
+         url('delicious-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @keyframes opaque {
@@ -38,14 +58,13 @@ working fonts
 /* framework */
 html {
 /*    background-image: url("galaxy.jpg");*/
-    background-size: cover;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #baeef4 100%);
     background-attachment: fixed;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #9EE6EF 50%, rgba(255,255, 255, 0) 100%);
 }
 
 body {
     background: #fff;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.07);
     color: #545454;
     font-size: 16px;
     line-height: 1.5;
@@ -109,12 +128,6 @@ li.drop {
     visibility:hidden;
 }
 
-/*
-li.drop:hover div.dropMenu {
-    display: block;
-}
-*/
-
 div.dropMenu {
     font-family: "brandonGrotesque";
     position: absolute;
@@ -150,12 +163,24 @@ h1 {
     font-size: 50px;
     text-align: center;
     cursor: default;
+    
+    margin-bottom:0;
+    padding-bottom:0;
 }
 
-p {
+span.quote, .author {
+    font-family: "Ostrich Sans";
+    font-size: 30px;
+    font-weight: 400;
+    color: #77C9D4;
+    display:block;
+    text-align: center;
+}
+
+div.text {
     font-family: "deliHeavy";
     font-size: 15px;
-    padding: 30px 30px 300px;
+    padding: 10px 30px 300px;
     border:5px double #57BC90;
     border-radius: 4px 15px 15px;
     
@@ -164,6 +189,8 @@ p {
 }
 
 p.head {
+    font-family: "deliHeavy";
+    font-size: 15px;
     color:dimgrey;
     font-size: 30px;
     padding: 0px;
@@ -172,8 +199,7 @@ p.head {
 }
 
 p.about {
-    font-size: 25px;
-    text-align: center;
+    font-size: 20px;;
     border: none;
     padding: 0px;
 }
@@ -184,17 +210,7 @@ a {
 }
 
 /* block settings */
-#about {
-    padding: 0px 25px 100px;
-    border: 1px dashed #57BC90;
-}
-
-#portfolio {
-    padding: 0px 25px 100px;
-    border: 1px dashed #57BC90;
-}
-
-#contact {
+section {
     padding: 0px 25px 100px;
     border: 1px dashed #57BC90;
 }
@@ -209,15 +225,3 @@ a {
 /*    bottom: 0;*/
     left: 0;
 }
-
-/* idk what to do with this lmao saving it for later
-img {
-    animation: appear 2s cubic-bezier(0, 0, .78, .36) 1;
-    background: transparent;
-    border: 10px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    display: block;
-    margin: 1.3em auto;
-    max-width: 95%;
-}
-*/
