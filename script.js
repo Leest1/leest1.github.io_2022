@@ -1,16 +1,22 @@
 var scrollPosition;
 var scrollDirection;
 var prevMouseY = 100;
+var dropOn = false;
+var detect = 50;
 
 // show navigation bar when moving mouse to top of screen ; hides when leaves top of screen
 $(document).mousemove( function(event) {
-    if(event.clientY < 50) {
-        if(prevMouseY > 50) {
+    if($(window).width() <= 485 && detect > 50) {
+        detect = 200;
+    }
+    
+    if(event.clientY < detect) {
+        if(prevMouseY > detect) {
             $("ul.navigation").dequeue().stop().slideDown("slow");
         }
     }
-    else if (event.clientY >= 50) {
-        if(prevMouseY <= 50) {
+    else if (event.clientY >= detect) {
+        if(prevMouseY <= detect) {
             $("ul.navigation").dequeue().stop().slideUp("slow");
         }
     }
@@ -39,7 +45,15 @@ $(window).scroll(function() {
 
 
 // toggle dropdown menu
-//$("#about").click( function() {
-//    $(this).hide();
-////    $(div.dropMenu).fadeToggle("slow");
-//});
+$(document).ready( function() {
+    $("a.menuIcon").click( function() {
+        $("div.dropMenu").dequeue().stop().fadeToggle("fast");
+        dropOn = !dropOn;
+        if(dropOn == false) {
+            detect = 50;
+        }
+        else {
+            detect = 200;
+        }
+    });
+});
