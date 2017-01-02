@@ -193,21 +193,23 @@ div.text {
     cursor:default;
     word-wrap: break-word;
     
+    text-align: center;
     column-count: 2;
-    column-rule: 2px dashed #57BC90;
 }
 
 p.about {
     margin:25px;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
     padding: 0px;
+    text-align: left;
 }
 
-img.me {
+img.about {
     border-radius: 50px;
     width:220px;
     max-width: 100%;
+    vertical-align: middle;
 }
 
 /* block settings */
@@ -223,6 +225,13 @@ a {
 
 #about {
     display:none;
+}
+
+button {
+    border: none;
+    background-color: gainsboro;
+    padding:5px;
+    border-radius: 50%;
 }
 
 #portfolio {

@@ -65,11 +65,16 @@ $(document).ready( function() {
 // toggle sections
 var section = "#home";
 var toggleSections = function(section) {
-    $("header").slideUp("fast");
-    $("#portfolio").slideUp("fast");
-    $("#contact").slideUp("fast");
-    $("#about").slideUp("fast");
-    $(section).slideDown("fast");
+//    $("header").slideUp("slow");
+//    $("#portfolio").slideUp("slow");
+//    $("#contact").slideUp("slow");
+//    $("#about").slideUp("slow");
+//    $(section).slideDown("slow");
+    $("header").hide("slow");
+    $("#portfolio").hide("slow");
+    $("#contact").hide("slow");
+    $("#about").hide("slow");
+    $(section).show("slow");
 }
 
 $(document).ready( function() {
@@ -78,7 +83,7 @@ $(document).ready( function() {
         section = "#home";
     });
     $(".aboutButton").click ( function() {
-        if(section = "#about"){ toggleSections("#about"); }
+        if(section != "#about"){ toggleSections("#about"); }
         section = "#about";
     });
     $(".portfolioButton").click ( function() {
@@ -88,5 +93,17 @@ $(document).ready( function() {
     $(".contactButton").click( function() {
         if(section != "#contact"){ toggleSections("#contact"); }
         section = "#contact";
+    });
+});
+
+// about buttons toggling
+$(document).ready( function(){
+    $("#about1").click( function() {
+        $("#aboutSector1").show("slow");
+        $("#aboutSector2").hide("slow");
+    });
+    $("#about2").click( function() {
+        $("#aboutSector1").hide("slow");
+        $("#aboutSector2").show("slow");
     });
 });
