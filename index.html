@@ -12,50 +12,47 @@
   
     <div id=navigation>
         <ul class="navigation" id="myNav">
-            <li style="float:left"><a href="#"><span class="ti-crown"></span></a></li>
-            <li><a href="#contact">CONTACT</a></li>
-            <li><a href="#portfolio">PORTFOLIO</a></li>
-            <li><a href="#about">ABOUT ME</a></li>
-            <li><a href="#">HOME</a></li>
+            <li style="float:left"><a href="javascript:void(0)" class="homeButton"><span class="ti-crown"></span></a></li>
+            <li><a href="javascript:void(0)" class="contactButton">CONTACT</a></li>
+            <li><a href="javascript:void(0)" class="portfolioButton">PORTFOLIO</a></li>
+            <li><a href="javascript:void(0)" class="aboutButton">ABOUT ME</a></li>
+            <li><a href="javascript:void(0)" class="homeButton">HOME</a></li>
             
             <li class="drop">
                 <a class="menuIcon" href="javascript:void(0)"><span class="ti-menu"></span></a>
                 <div class=dropMenu>
-                    <a href="#about">ABOUT ME</a><br>
-                    <a href="#portfolio">PORTFOLIO</a><br>
-                    <a href="#contact">CONTACT</a><br>
+                    <a href="#about" class="aboutButton">ABOUT ME</a><br>
+                    <a href="#portfolio" class="portfolioButton">PORTFOLIO</a><br>
+                    <a href="#contact" class="contactButton">CONTACT</a><br>
                 </div>
             </li>
         </ul>
     </div>
     
     <body>
-        <header id="start">
+        <header id="start" style="padding-bottom:108px">
             <h1 style="font-size: 100px;font-weight:300">Shannon T Lee</h1>
             <section id="quote" style="padding: 0px 8px 0px; border: none">
                 <span class="quote">insert text here</span>
                 <span class="author" style="font-size:20px;display:block;text-align:right;padding-right:20px">- here is an optional author</span>
             </section>
         </header>
-        <br>
         <section id="about">
             <p class="head"><span class="ti-user"></span> about</p>
             <div class="text">
+                <img src="./style/cone.jpg" alt="Me" class="me">
                 <p class="about">I am a 3rd year Computer Science major at University of California, Irvine.</p>
             </div>
         </section>
-        <br>
         <section id="portfolio">
             <p class="head"><span class="ti-folder"></span> portfolio</p>
-            <div class="text">test</div>
+            <div class="text" style="column-count:1;padding-bottom:280px">test<br>test<br>test<br>test</div>
         </section>
-        <br>
         <section id="contact">
             <p class="head"><span class="ti-email"></span> contact</p>
-            <div class="text">test</div>
+            <div class="text" style="column-count:1;padding-bottom:280px">test<br>test<br>test<br>test</div>
         </section>
         
-        <br>
     </body>
     
     <div id="bottom">

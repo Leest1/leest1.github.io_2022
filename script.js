@@ -41,9 +41,6 @@ $(window).scroll(function() {
     scrollPosition = nextPosition;
 });
 
-// hide navigation bar when clicking a button
-
-
 // toggle dropdown menu
 $(document).ready( function() {
     $("a.menuIcon").click( function() {
@@ -58,9 +55,38 @@ $(document).ready( function() {
     });
 });
 
-// slide down header animation
+// text header animation
 $(document).ready( function() {
     $("h1").animate({opacity:1, letterSpacing: "0"}, {duration:2500});
     $("span.quote").animate({opacity:1, letterSpacing: "0"}, {duration:2500});
     $("span.author").animate({opacity:1, letterSpacing: "0"}, {duration:2500});
+});
+
+// toggle sections
+var section = "#home";
+var toggleSections = function(section) {
+    $("header").slideUp("fast");
+    $("#portfolio").slideUp("fast");
+    $("#contact").slideUp("fast");
+    $("#about").slideUp("fast");
+    $(section).slideDown("fast");
+}
+
+$(document).ready( function() {
+    $(".homeButton").click( function() {
+        if(section != "#home"){ toggleSections("header"); }
+        section = "#home";
+    });
+    $(".aboutButton").click ( function() {
+        if(section = "#about"){ toggleSections("#about"); }
+        section = "#about";
+    });
+    $(".portfolioButton").click ( function() {
+        if(section != "#portfolio"){ toggleSections("#portfolio"); }
+        section = "#portfolio";
+    });
+    $(".contactButton").click( function() {
+        if(section != "#contact"){ toggleSections("#contact"); }
+        section = "#contact";
+    });
 });

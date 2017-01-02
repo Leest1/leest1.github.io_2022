@@ -173,17 +173,6 @@ span.author {
     letter-spacing: 10px;
 }
 
-div.text {
-    font-family: "deliHeavy";
-    font-size: 15px;
-    padding: 10px 30px 300px;
-    border:5px double #57BC90;
-    border-radius: 4px 15px 15px;
-    
-    cursor:default;
-    word-wrap: break-word;
-}
-
 p.head {
     font-family: "deliHeavy";
     font-size: 15px;
@@ -194,21 +183,54 @@ p.head {
     border-radius: 0px;
 }
 
+div.text {
+    font-family: "deliHeavy";
+    font-size: 15px;
+    padding: 25px;
+    border:5px double #57BC90;
+    border-radius: 4px 15px 15px;
+    
+    cursor:default;
+    word-wrap: break-word;
+    
+    column-count: 2;
+    column-rule: 2px dashed #57BC90;
+}
+
 p.about {
-    font-size: 20px;;
+    margin:25px;
+    font-size: 20px;
     border: none;
     padding: 0px;
 }
 
-a {
-    color: #6aa7e8;
-    text-decoration: none;
+img.me {
+    border-radius: 50px;
+    width:220px;
+    max-width: 100%;
 }
 
 /* block settings */
 section {
     padding: 0px 25px 100px;
     border: 1px dashed #57BC90;
+    border-bottom: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#about {
+    display:none;
+}
+
+#portfolio {
+    display:none;
+}
+
+#contact {
+    display:none;
 }
 
 /* bottom info block stuff */
@@ -217,7 +239,6 @@ section {
     background-color: #FFF;
     position: absolute;
     width: 100%;
-    padding: 60px;
-/*    bottom: 0;*/
+    padding: 60px 0px 60px 0px;
     left: 0;
 }
