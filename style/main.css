@@ -1,8 +1,11 @@
 @import url("themify-icons.css");
 @import url("./ostrich-sans/ostrich-sans.css");
 /* stuff i want to do:
-- slide left/right animations
-- body to adjust to window
+fit text
+sliding without columns about section
+on mobile/small window
+bottom info bar columns
+fill out shit
 */
 
 /* custom stuff */
@@ -210,7 +213,7 @@ div.text {
 
 div.empty {
     position:relative;
-    left:-300px;
+    left:300px;
 }
 
 p.about {

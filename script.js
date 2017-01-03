@@ -1,3 +1,6 @@
+/*jslint browser: true*/
+/*global $, jQuery, alert*/
+
 var scrollPosition;
 var scrollDirection;
 var prevMouseY = 100;
@@ -5,18 +8,17 @@ var dropOn = false;
 var detect = 50;
 
 // show navigation bar when moving mouse to top of screen ; hides when leaves top of screen
-$(document).mousemove( function(event) {
-    if($(window).width() <= 485 && detect > 50) {
+$(document).mousemove(function (event) {
+    if ($(window).width() <= 485 && detect > 50) {
         detect = 200;
     }
     
-    if(event.clientY < detect) {
-        if(prevMouseY > detect) {
+    if (event.clientY < detect) {
+        if (prevMouseY >= detect) {
             $("ul.navigation").dequeue().stop().slideDown("slow");
         }
-    }
-    else if (event.clientY >= detect) {
-        if(prevMouseY <= detect) {
+    } else if (event.clientY >= detect) {
+        if (prevMouseY < detect) {
             $("ul.navigation").dequeue().stop().slideUp("slow");
         }
     }
@@ -24,16 +26,15 @@ $(document).mousemove( function(event) {
 });
 
 // hide navigation bar when scrolling down; show when scroll up
-$(window).scroll(function() {
+$(window).scroll(function () {
     var nextPosition = $(this).scrollTop();
-    if(scrollPosition < nextPosition) {
-        if(scrollDirection != "down") {
+    if (scrollPosition < nextPosition) {
+        if (scrollDirection != "down") {
             $("ul.navigation").dequeue().stop().slideUp("slow");
             scrollDirection = "down";
         }
-    }
-    else {
-        if(scrollDirection != "up") {
+    } else {
+        if (scrollDirection != "up") {
             $("ul.navigation").dequeue().stop().slideDown("slow");
             scrollDirection = "up";
         }
@@ -42,90 +43,77 @@ $(window).scroll(function() {
 });
 
 // toggle dropdown menu
-$(document).ready( function() {
-    $("a.menuIcon").click( function() {
+$(document).ready(function () {
+    $("a.menuIcon").click(function () {
         $("div.dropMenu").dequeue().stop().fadeToggle("fast");
         dropOn = !dropOn;
-        if(dropOn == false) {
+        if (dropOn == false) {
             detect = 50;
-        }
-        else {
+        } else {
             detect = 200;
         }
     });
 });
 
 // text header animation
-$(document).ready( function() {
-    $("h1").animate({opacity:1, letterSpacing: "0"}, {duration:2500});
-    $("span.quote").animate({opacity:1, letterSpacing: "0"}, {duration:2500});
-    $("span.author").animate({opacity:1, letterSpacing: "0"}, {duration:2500});
+$(document).ready(function () {
+    $("h1").animate({opacity: 1, letterSpacing: "0"}, {duration : 2500});
+    $("span.quote").animate({opacity: 1, letterSpacing: "0"}, {duration : 2500});
+    $("span.author").animate({opacity: 1, letterSpacing: "0"}, {duration : 2500});
 });
 
 // toggle sections
-var section = "#home";
-var toggleSections = function(section) {
-//    $("header").slideUp("slow");
-//    $("#portfolio").slideUp("slow");
-//    $("#contact").slideUp("slow");
-//    $("#about").slideUp("slow");
-//    $(section).slideDown("slow");
-    $("header").hide("slow");
-    $("#portfolio").hide("slow");
-    $("#contact").hide("slow");
-    $("#about").hide("slow");
-    $(section).show("slow");
-}
+var section = "header";
+var toggleSections = function (sectionNew) {
+    $(section).hide("slow");
+    $(sectionNew).show("slow");
+};
 
-$(document).ready( function() {
-    $(".homeButton").click( function() {
-        if(section != "#home"){ toggleSections("header"); }
-        section = "#home";
+$(document).ready(function () {
+    $(".homeButton").click(function () {
+        if (section != "header") { toggleSections("header"); }
+        section = "header";
     });
-    $(".aboutButton").click ( function() {
-        if(section != "#about"){ toggleSections("#about"); }
+    $(".aboutButton").click(function () {
+        if (section != "#about") { toggleSections("#about"); }
         section = "#about";
     });
-    $(".portfolioButton").click ( function() {
-        if(section != "#portfolio"){ toggleSections("#portfolio"); }
+    $(".portfolioButton").click( function () {
+        if (section != "#portfolio") { toggleSections("#portfolio"); }
         section = "#portfolio";
     });
-    $(".contactButton").click( function() {
-        if(section != "#contact"){ toggleSections("#contact"); }
+    $(".contactButton").click(function () {
+        if (section != "#contact") { toggleSections("#contact"); }
         section = "#contact";
     });
 });
 
-// about buttons toggling
-var about=1;
-var toggleAbout = function(sector) {
-//    $("#aboutSector1").hide("slow");
-//    $("#aboutSector2").hide("slow");
-//    $("#aboutSector3").hide("slow");
-//    $("#aboutSector4").hide("slow");
-//    $(sector).show("slow");
-    $("#aboutSector1").hide().stop(true,true).animate({left:"-300px"}, "slow");
-    $("#aboutSector2").hide().stop(true,true).animate({left:"-300px"}, "slow")
-    $("#aboutSector3").hide().stop(true,true).animate({left:"-300px"}, "slow")
-    $("#aboutSector4").hide().stop(true,true).animate({left:"-300px"}, "slow")
-    $(sector).show().stop(true,true).animate({left:"0px"}, "slow");
-}
+// about buttons toggling 1 < 2 < 3 < 4
+var about = "#aboutSector1";
+var toggleAbout = function (sector) {
+    $(about).css("display", "none");
+    if (about.substr(-1) < sector.substr(-1)) {
+        $(sector).css( {"display" : "block", "left" : "300px"}).animate({left : "0px"}, "slow");
+    } else {
+        $(sector).css( {"display" : "block", "left" : "-300px"}).animate({left : "0px"}, "slow");
+    }
+    about = sector;
+};
 
-$(document).ready( function(){
-    $("#about1").click( function() {
-        if(about!=1){toggleAbout("#aboutSector1");}
-        about = 1;
+$(document).ready(function () {
+    $("#about1").click(function () {
+        if (about != "#aboutSector1") {toggleAbout("#aboutSector1"); }
     });
-    $("#about2").click( function() {
-        if(about!=2){toggleAbout("#aboutSector2");}
-        about = 2;
+    $("#about2").click(function () {
+        if (about != "#aboutSector2") {toggleAbout("#aboutSector2"); }
+        about = "#aboutSector2";
     });
-    $("#about3").click( function() {
-        if(about!=3){toggleAbout("#aboutSector3");}
-        about = 3;
+    $("#about3").click(function () {
+        if (about != "#aboutSector3") {toggleAbout("#aboutSector3"); }
+        about = "#aboutSector3";
     });
-    $("#about4").click( function() {
-        if(about!=4){toggleAbout("#aboutSector4");}
-        about = 4;
+    $("#about4").click(function () {
+        if (about != "#aboutSector4") {toggleAbout("#aboutSector4"); }
+        about = "#aboutSector4";
     });
 });
