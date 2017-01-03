@@ -97,13 +97,35 @@ $(document).ready( function() {
 });
 
 // about buttons toggling
+var about=1;
+var toggleAbout = function(sector) {
+//    $("#aboutSector1").hide("slow");
+//    $("#aboutSector2").hide("slow");
+//    $("#aboutSector3").hide("slow");
+//    $("#aboutSector4").hide("slow");
+//    $(sector).show("slow");
+    $("#aboutSector1").hide().stop(true,true).animate({left:"-300px"}, "slow");
+    $("#aboutSector2").hide().stop(true,true).animate({left:"-300px"}, "slow")
+    $("#aboutSector3").hide().stop(true,true).animate({left:"-300px"}, "slow")
+    $("#aboutSector4").hide().stop(true,true).animate({left:"-300px"}, "slow")
+    $(sector).show().stop(true,true).animate({left:"0px"}, "slow");
+}
+
 $(document).ready( function(){
     $("#about1").click( function() {
-        $("#aboutSector1").show("slow");
-        $("#aboutSector2").hide("slow");
+        if(about!=1){toggleAbout("#aboutSector1");}
+        about = 1;
     });
     $("#about2").click( function() {
-        $("#aboutSector1").hide("slow");
-        $("#aboutSector2").show("slow");
+        if(about!=2){toggleAbout("#aboutSector2");}
+        about = 2;
+    });
+    $("#about3").click( function() {
+        if(about!=3){toggleAbout("#aboutSector3");}
+        about = 3;
+    });
+    $("#about4").click( function() {
+        if(about!=4){toggleAbout("#aboutSector4");}
+        about = 4;
     });
 });
