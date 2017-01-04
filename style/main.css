@@ -1,10 +1,9 @@
 @import url("themify-icons.css");
 @import url("./ostrich-sans/ostrich-sans.css");
 /* stuff i want to do:
-fit text
-sliding without columns about section
 on mobile/small window
 bottom info bar columns
+click removes drop menu
 fill out shit
 */
 
@@ -208,16 +207,15 @@ div.text {
     overflow: hidden;
     
     text-align: center;
-    column-count: 2;
 }
 
 div.empty {
     position:relative;
-    left:300px;
+    left:900px;
 }
 
 p.about {
-    margin:25px;
+    margin-left:50%;
     font-size: 18px;
     border: none;
     padding: 0px;
@@ -226,9 +224,11 @@ p.about {
 
 img.about {
     border-radius: 50px;
-    width:220px;
+    margin-left:5%;
+    width:30%;
     max-width: 100%;
     vertical-align: middle;
+    float:left;
 }
 
 /* block settings */
@@ -266,12 +266,12 @@ button {
 }
 
 /* bottom info block stuff */
-#bottom {
+div.bottom {
     border-top: 1px dashed #77C9D4;
     background-color: #FFF;
     position: absolute;
     width: 100%;
     height: 200px;
-    left: 0;
     bottom:-200px;
+    vertical-align: middle;
 }

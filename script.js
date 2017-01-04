@@ -7,6 +7,11 @@ var prevMouseY = 100;
 var dropOn = false;
 var detect = 50;
 
+// fitText
+$(window).resize(function () {
+    jQuery("#nameHead").fitText(0.5, {minFontSize: "50px", maxFontSize: "150px"});
+});
+
 // show navigation bar when moving mouse to top of screen ; hides when leaves top of screen
 $(document).mousemove(function (event) {
     if ($(window).width() <= 485 && detect > 50) {
@@ -91,11 +96,14 @@ $(document).ready(function () {
 // about buttons toggling 1 < 2 < 3 < 4
 var about = "#aboutSector1";
 var toggleAbout = function (sector) {
-    $(about).css("display", "none");
     if (about.substr(-1) < sector.substr(-1)) {
-        $(sector).css( {"display" : "block", "left" : "300px"}).animate({left : "0px"}, "slow");
+        $(about).animate({left:"-700px"}, 500).delay(0).hide(0, function() {
+            $(sector).show(0).css("left", "700px").animate({left : "0px"}, "slow");
+        });
     } else {
-        $(sector).css( {"display" : "block", "left" : "-300px"}).animate({left : "0px"}, "slow");
+        $(about).animate({left:"700px"}, 500).delay(0).hide(0, function() {
+            $(sector).show(0).css("left", "-700px").animate({left : "0px"}, "slow"); 
+        });
     }
     about = sector;
 };
