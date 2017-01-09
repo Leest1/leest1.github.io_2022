@@ -6,6 +6,8 @@ var scrollDirection;
 var prevMouseY = 100;
 var dropOn = false;
 var detect = 50;
+var about = "#aboutSector1";
+var section = "header";
 
 // fitText
 $(window).resize(function () {
@@ -25,6 +27,13 @@ $(document).mousemove(function (event) {
     } else if (event.clientY >= detect) {
         if (prevMouseY < detect) {
             $("ul.navigation").dequeue().stop().slideUp("slow");
+            $("div.dropMenu").dequeue().stop().hide();
+            dropOn = !dropOn;
+            if (dropOn == false) {
+            detect = 50;
+            } else {
+                detect = 200;
+            }
         }
     }
     prevMouseY = event.clientY;
@@ -63,46 +72,43 @@ $(document).ready(function () {
 // text header animation
 $(document).ready(function () {
     $("h1").animate({opacity: 1, letterSpacing: "0"}, {duration : 2500});
-    $("span.quote").animate({opacity: 1, letterSpacing: "0"}, {duration : 2500});
-    $("span.author").animate({opacity: 1, letterSpacing: "0"}, {duration : 2500});
+    $("span.quote").animate({opacity: 1, letterSpacing: "5"}, {duration : 2500});
+//    $("span.author").animate({opacity: 1, letterSpacing: "0"}, {duration : 2500});
 });
 
 // toggle sections
-var section = "header";
 var toggleSections = function (sectionNew) {
-    $(section).hide("slow");
-    $(sectionNew).show("slow");
+    if (!$(section).is(':animated')) {
+        $(section).dequeue().stop().hide("slow");
+        $(sectionNew).dequeue().stop().show("slow");
+        section = sectionNew;
+    }
 };
 
 $(document).ready(function () {
     $(".homeButton").click(function () {
         if (section != "header") { toggleSections("header"); }
-        section = "header";
     });
     $(".aboutButton").click(function () {
         if (section != "#about") { toggleSections("#about"); }
-        section = "#about";
     });
     $(".portfolioButton").click( function () {
         if (section != "#portfolio") { toggleSections("#portfolio"); }
-        section = "#portfolio";
     });
     $(".contactButton").click(function () {
         if (section != "#contact") { toggleSections("#contact"); }
-        section = "#contact";
     });
 });
 
 // about buttons toggling 1 < 2 < 3 < 4
-var about = "#aboutSector1";
 var toggleAbout = function (sector) {
     if (about.substr(-1) < sector.substr(-1)) {
-        $(about).animate({left:"-700px"}, 500).delay(0).hide(0, function() {
-            $(sector).show(0).css("left", "700px").animate({left : "0px"}, "slow");
+        $(about).dequeue().stop().animate({left: "-700px"}, 500).delay(0).hide(0, function () {
+            $(sector).dequeue().stop().show(0).css("left", "700px").animate({left : "0px"}, "slow");
         });
     } else {
-        $(about).animate({left:"700px"}, 500).delay(0).hide(0, function() {
-            $(sector).show(0).css("left", "-700px").animate({left : "0px"}, "slow"); 
+        $(about).dequeue().stop().animate({left: "700px"}, 500).delay(0).hide(0, function () {
+            $(sector).dequeue().stop().show(0).css("left", "-700px").animate({left : "0px"}, "slow");
         });
     }
     about = sector;
