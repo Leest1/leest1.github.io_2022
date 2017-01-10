@@ -1,7 +1,7 @@
 @import url("themify-icons.css");
 @import url("./ostrich-sans/ostrich-sans.css");
 /* stuff i want to do:
-on mobile/small window
+on mobile/small window: swipe carousel
 bottom bar display:none on home
 note: about bar bugs sometimes
 fill out shit
@@ -24,14 +24,6 @@ contact form stuff email
     font-weight: normal;
     font-style: normal;
 
-}
-
-@media all and (max-width: 485px) {
-    ul.navigation li:not(.drop):not(:first-child) { display: none; }
-    
-    ul.navigation li.drop {
-        visibility: visible;
-    }
 }
 
 /* framework */
@@ -280,4 +272,21 @@ h3 {
     font-weight:400;
     font-size: 16px;
     color: #77C9D4;
+}
+
+@media all and (max-width: 485px) {
+    ul.navigation li:not(.drop):not(:first-child) { display: none; }
+    
+    ul.navigation li.drop {
+        visibility: visible;
+    }
+    
+    div.infoBottom {
+        width:100%;
+    }
+    
+    div.bottom {
+        display:block;
+        bottom:-427px;
+    }
 }
