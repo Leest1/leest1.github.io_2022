@@ -274,19 +274,24 @@ h3 {
     color: #77C9D4;
 }
 
+/* small screens and mobile */
 @media all and (max-width: 485px) {
     ul.navigation li:not(.drop):not(:first-child) { display: none; }
     
     ul.navigation li.drop {
         visibility: visible;
     }
-    
     div.infoBottom {
         width:100%;
     }
-    
     div.bottom {
         display:block;
         bottom:-427px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    span.quote {
+        font-size: 25px;
     }
 }

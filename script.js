@@ -19,7 +19,6 @@ $(document).mousemove(function (event) {
     if ($(window).width() <= 485 && detect > 50) {
         detect = 200;
     }
-    
     if (event.clientY < detect) {
         if (prevMouseY >= detect) {
             $("ul.navigation").dequeue().stop().slideDown("slow");
@@ -28,6 +27,7 @@ $(document).mousemove(function (event) {
         if (prevMouseY < detect) {
             $("ul.navigation").dequeue().stop().slideUp("slow");
             $("div.dropMenu").dequeue().stop().hide();
+            $("a.menuIcon").css({"background-color":"#FFF", "color":"#77C9D4"});
             dropOn = !dropOn;
             if (dropOn == false) {
             detect = 50;
@@ -62,8 +62,10 @@ $(document).ready(function () {
         $("div.dropMenu").dequeue().stop().fadeToggle("fast");
         dropOn = !dropOn;
         if (dropOn == false) {
+            $("a.menuIcon").css({"background-color":"#FFF", "color":"#77C9D4"});
             detect = 50;
         } else {
+            $("a.menuIcon").css({"color":"#FFF", "background-color":"#77C9D4"});
             detect = 200;
         }
     });
@@ -72,8 +74,7 @@ $(document).ready(function () {
 // text header animation
 $(document).ready(function () {
     $("h1").animate({opacity: 1, letterSpacing: "0"}, {duration : 2500});
-    $("span.quote").animate({opacity: 1, letterSpacing: "5"}, {duration : 2500});
-//    $("span.author").animate({opacity: 1, letterSpacing: "0"}, {duration : 2500});
+    $("span.quote").animate({opacity: 1, letterSpacing: "3"}, {duration : 2500});
 });
 
 // toggle sections
