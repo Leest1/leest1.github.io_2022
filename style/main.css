@@ -221,6 +221,7 @@ section {
     border: 1px dashed #57BC90;
     border-bottom: none;
     width:90%;
+    height:100%;
 }
 
 a {
@@ -293,5 +294,11 @@ h3 {
     }
     span.quote {
         font-size: 25px;
+    }
+    #about {
+        height: 550px;
+    }
+    div.text {
+        height: 70%;
     }
 }

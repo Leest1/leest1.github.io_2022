@@ -132,3 +132,17 @@ $(document).ready(function () {
         about = "#aboutSector4";
     });
 });
+
+// swipe mechanism
+$(document).ready(function () {
+    $("div.text").on("swipeleft", function(){
+        if (about.substr(-1) != 4) {
+            toggleAbout("#aboutSector"+(about.substr(-1)-1));
+        }
+    });
+    $("div.text").on("swiperight", function(){
+       if (about.substr(-1) != 1) {
+            toggleAbout("#aboutSector"+(about.substr(-1)+1));
+        }
+    });
+});
