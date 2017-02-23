@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Shannon Lee</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="first website">
+        <meta name="keywords" content="Shannon, Lee, portfolio, Computer Science, UC Irvine">
+        <meta name="description" content="Shannon Lee">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Shannon Lee</title>
         <link rel="stylesheet" href="./style/main.css">
         <script src="jquery-3.1.1.min.js"></script>
         <script src="jquery.fittext.js"></script>
@@ -42,22 +43,24 @@
             <div class="text">
                 <div class="empty" id="aboutSector1" style="left:0px">
                     <img class="about" src="./style/cone.jpg" alt="Me" id="pic1">
-                    <span class="ti-crown" style="font-size:30px"></span>
-                    <p class="about">I am a 3rd year Computer Science major at University of California, Irvine.</p>
+                    <p class="about" style="font-size:23px;text-align:center"><span class="ti-crown" style="font-size:30px;text-align:center"></span></p>
+                    <p class="about">&ensp;Hello! My name is Shannon and I'm a 3rd year Computer Science major at University of California, Irvine.</p>
+                    <p class="about">&ensp;I'm currently looking for a Summer 2017 Internship.</p>
+                    <p class="about">&ensp;My expected graduation date is June 2018, but am looking to graduate a quarter early.</p>
                 </div>
                 <div class="empty" id="aboutSector2" style="display:none">
                     <img class="about" src="./style/cat.jpg" alt="Kitty" id="pic2">
-                    <span class="ti-thought" style="font-size:30px"></span>
-                    <p class="about">What I Do</p>
+                    <p class="about" style="font-size:23px;text-align:center"><span class="ti-thought"></span> &ensp; What I Do</p>
+                    <p class="about">&ensp;I'm the graphic designer for Information and Computer Science Student Council.</p>
                 </div>
                 <div class="empty" id="aboutSector3" style="display:none">
                     <img class="about" src="./style/cone.jpg" alt="killerWhale" id="pic3">
-                    <span class="ti-heart" style="font-size:30px"></span>
-                    <p class="about">Hobbies/Interests</p>
+                    <p class="about" style="font-size:23px;text-align:center"><span class="ti-heart" style="font-size:30px"></span> &ensp; Hobbies/Interests</p>
+                    <p class="about"></p>
                 </div>
                 <div class="empty" id="aboutSector4" style="display:none">
                     <img class="about" src="./style/cat.jpg" alt="kitty2" id="pic4">
-                    <span class="ti-export" style="font-size:30px"></span>
+                    <p class="about" style="font-size:23px;text-align:center"><span class="ti-export" style="font-size:30px"></span></p>
                     <p class="about"><a href="style/resume.pdf" style="color:dimgrey">View My Resume</a></p>
                 </div>
             </div>
@@ -72,9 +75,18 @@
             <p class="head"><span class="ti-folder"></span> portfolio</p>
             <div class="text" style="column-count:1;padding-bottom:280px">test<br>test<br>test<br>test</div>
         </section>
+        
         <section id="contact">
             <p class="head"><span class="ti-email"></span> contact</p>
-            <div class="text" style="column-count:1;padding-bottom:280px">test<br>test<br>test<br>test</div>
+            <form>
+                <label>Name</label>
+                <input name="name" placeholder="&ensp;Name">
+                <label>Email</label>
+                <input name="email" placeholder="&ensp;E-mail">
+                <label>Message</label>
+                <textarea name="message" placeholder="&ensp;Hello!"></textarea>
+                <input id="submit" name="submit" type="submit" value="Submit">
+            </form>
         </section>
         
     </body>

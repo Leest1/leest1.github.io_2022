@@ -103,16 +103,18 @@ $(document).ready(function () {
 
 // about buttons toggling 1 < 2 < 3 < 4
 var toggleAbout = function (sector) {
-    if (about.substr(-1) < sector.substr(-1)) {
-        $(about).dequeue().stop().animate({left: "-700px"}, 500).delay(0).hide(0, function () {
-            $(sector).dequeue().stop().show(0).css("left", "700px").animate({left : "0px"}, "slow");
-        });
-    } else {
-        $(about).dequeue().stop().animate({left: "700px"}, 500).delay(0).hide(0, function () {
-            $(sector).dequeue().stop().show(0).css("left", "-700px").animate({left : "0px"}, "slow");
-        });
+    if(!$(sector).is(":animated") && !$(about).is(":animated")){
+        if (about.substr(-1) < sector.substr(-1)) {
+            $(about).dequeue().stop().animate({left: "-700px"}, 500).delay(0).hide(0, function () {
+                $(sector).dequeue().stop().show(0).css("left", "700px").animate({left : "0px"}, "slow");
+            });
+        } else {
+            $(about).dequeue().stop().animate({left: "700px"}, 500).delay(0).hide(0, function () {
+                $(sector).dequeue().stop().show(0).css("left", "-700px").animate({left : "0px"}, "slow");
+            });
+        }
+        about = sector;
     }
-    about = sector;
 };
 
 $(document).ready(function () {
