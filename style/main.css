@@ -5,7 +5,6 @@ on mobile/small window: swipe carousel
 bottom bar display:none on home
 note: about bar bugs sometimes
 fill out shit
-contact form stuff email
 */
 
 /* custom stuff */
@@ -305,6 +304,17 @@ input, textarea {
 
 textarea {
     height: 125px;
+}
+
+#submit {
+    border: 1px solid transparent;
+    border-top: 1px solid #DDD;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+#submit:active {
+    background-color: darkgrey;
 }
 
 /* small screens and mobile */
