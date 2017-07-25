@@ -6,7 +6,6 @@ var scrollDirection;
 var prevMouseY = 100;
 var dropOn = false;
 var detect = 50;
-var about = "#aboutSector1";
 var section = "header";
 
 // fitText
@@ -101,50 +100,45 @@ $(document).ready(function () {
     });
 });
 
-// about buttons toggling 1 < 2 < 3 < 4
-var toggleAbout = function (sector) {
-    if(!$(sector).is(":animated") && !$(about).is(":animated")){
-        if (about.substr(-1) < sector.substr(-1)) {
-            $(about).dequeue().stop().animate({left: "-700px"}, 500).delay(0).hide(0, function () {
-                $(sector).dequeue().stop().show(0).css("left", "700px").animate({left : "0px"}, "slow");
-            });
-        } else {
-            $(about).dequeue().stop().animate({left: "700px"}, 500).delay(0).hide(0, function () {
-                $(sector).dequeue().stop().show(0).css("left", "-700px").animate({left : "0px"}, "slow");
-            });
-        }
-        about = sector;
-    }
-};
+/*!
+* FitText.js 1.2
+*
+* Copyright 2011, Dave Rupert http://daverupert.com
+* Released under the WTFPL license
+* http://sam.zoy.org/wtfpl/
+*
+* Date: Thu May 05 14:23:00 2011 -0600
+*/
 
-$(document).ready(function () {
-    $("#about1").click(function () {
-        if (about != "#aboutSector1") {toggleAbout("#aboutSector1"); }
-    });
-    $("#about2").click(function () {
-        if (about != "#aboutSector2") {toggleAbout("#aboutSector2"); }
-        about = "#aboutSector2";
-    });
-    $("#about3").click(function () {
-        if (about != "#aboutSector3") {toggleAbout("#aboutSector3"); }
-        about = "#aboutSector3";
-    });
-    $("#about4").click(function () {
-        if (about != "#aboutSector4") {toggleAbout("#aboutSector4"); }
-        about = "#aboutSector4";
-    });
-});
+(function( $ ){
 
-// swipe mechanism
-$(document).ready(function () {
-    $("div.text").on("swipeleft", function(){
-        if (about.substr(-1) != 4) {
-            toggleAbout("#aboutSector"+(about.substr(-1)-1));
-        }
+  $.fn.fitText = function( kompressor, options ) {
+
+    // Setup options
+    var compressor = kompressor || 1,
+        settings = $.extend({
+          'minFontSize' : Number.NEGATIVE_INFINITY,
+          'maxFontSize' : Number.POSITIVE_INFINITY
+        }, options);
+
+    return this.each(function(){
+
+      // Store the object
+      var $this = $(this);
+
+      // Resizer() resizes items based on the object width divided by the compressor * 10
+      var resizer = function () {
+        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+      };
+
+      // Call once to set.
+      resizer();
+
+      // Call on resize. Opera debounces their resize by default.
+      $(window).on('resize.fittext orientationchange.fittext', resizer);
+
     });
-    $("div.text").on("swiperight", function(){
-       if (about.substr(-1) != 1) {
-            toggleAbout("#aboutSector"+(about.substr(-1)+1));
-        }
-    });
-});
+
+  };
+
+})( jQuery );

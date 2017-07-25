@@ -1,10 +1,8 @@
 @import url("themify-icons.css");
 @import url("./ostrich-sans/ostrich-sans.css");
 /* stuff i want to do:
-on mobile/small window: swipe carousel
 bottom bar display:none on home
 note: about bar bugs sometimes
-fill out shit
 */
 
 /* custom stuff */
@@ -175,30 +173,36 @@ p.head {
     border-radius: 0px;
 }
 
-div.text {
+.carousel {
     font-family: "deliHeavy";
     font-size: 15px;
     padding: 25px;
     border:5px double #57BC90;
-    border-radius: 4px 15px 15px;
-    
-    cursor:default;
-    word-wrap: break-word;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-align: center;
+    border-radius: 4px 15px 15px;   
+    cursor: default;
 }
 
-div.empty {
-    position:relative;
-    left:900px;
+ol.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-inner {
+    margin-bottom: 25px;
+}
+
+ol.carousel-indicators li {
+    background: darkgrey;
+}
+
+ol.carousel-indicators li.active {
+    background: grey;
 }
 
 p.about {
-    margin-left:50%;
+    margin-left:40%;
     font-size: 18px;
     border: none;
-    padding: 0px;
+    padding: 10px;
     text-align: left;
 }
 
@@ -206,20 +210,24 @@ img.about {
     border-radius: 50px;
     margin-left:5%;
     width:30%;
-    max-width: 100%;
     min-width:100px;
-    vertical-align: middle;
     float:left;
+}
+
+img.projects {
+    border-radius: 10px;
+    width: 45%;
+    min-width: 100px;
+    float: left;
 }
 
 /* block settings */
 section {
     margin-top:10px;
-    padding: 0px 25px 100px;
+    padding: 25px;
     border: 1px dashed #57BC90;
-    border-bottom: none;
-    width:90%;
-    height:100%;
+    width: 100%;
+    height:inherit;
 }
 
 a {
@@ -241,16 +249,14 @@ button {
 }
 
 /* bottom info block stuff */
-div.bottom {
+footer.bottom {
     border-top: 1px dashed #57BC90;
     background-color: #FFF;
     position: absolute;
     width: 100%;
-    height:auto;
-    bottom:-201px;
-    
+    height:200px;
     display:flex;
-    
+    bottom: -200px;
 }
 
 div.infoBottom {
@@ -277,11 +283,10 @@ h3 {
 form {
     font-family: "deliHeavy";
     font-size: 18px;
-    padding: 25px;
     border:5px double #57BC90;
     border-radius: 4px 15px 15px;
 
-    padding-bottom:30px;
+    padding-bottom:25px;
     text-align: center;
 }
 
@@ -295,12 +300,12 @@ input, textarea {
     font-size: 20px;
     font-family: "brandonGrotesque";
     resize: none;
+    padding: 2px 6px 1px 6px;
     border-radius: 3px;
     border: 1px solid transparent;
     border-top: none;
     border-bottom: 1px solid #DDD;
     box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
-    padding: 2px 6px 1px 6px;
 }
 
 textarea {
@@ -341,7 +346,7 @@ textarea {
     #about {
         height: 550px;
     }
-    div.text {
+    div.carousel {
         height: 70%;
     }
 }
