@@ -1,0 +1,190 @@
+// import math
+@use 'sass:math';
+// import partial files
+@import "variables";
+@import "functions";
+@import "mixins";
+
+$accent-border: 10px solid $peach; // BORDER ACCENT (on header and footer)
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    @include majorThird(1);
+
+    background-color: $bright-blue;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    @include majorThird(5);
+
+    margin-bottom: 0;
+}
+
+h2 {
+    @include majorThird(3);
+}
+
+
+// make images flexible
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: $coffee;
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+header {
+    border-bottom: $accent-border;
+}
+
+// navbar styling
+
+nav {
+    @include flex-box-col-center;
+
+    padding: 0 $default-indent*2;
+    
+    ul {
+        @include flex-box-col-center;
+
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    li {
+        @include majorThird(2);
+
+        margin: 0 $default-indent $default-indent $default-indent;
+    }
+
+    // flex basis on the image container, li
+    .logo {
+        text-align: center;
+
+        // max width on the image in pixels
+        img {
+            max-width: 200px;
+        }
+    }
+
+    a {
+        display: block;
+
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            color: $peach;
+        }
+    }
+}
+
+// establishes a white background
+
+.main-bkgd {
+    background: white url('/images/gulp-bottom-beans.jpg') repeat-x bottom;
+    padding-bottom: 300px;
+}
+
+
+// sits inside of the white background, centered
+
+.main {
+    @include default_main;
+    @include flex-box-col-space-between;
+
+    article {
+        flex-basis: 73%;
+    }
+}
+
+.main-products {
+    @include default_main;
+}
+
+picture {
+    margin: $default-indent*3 0 0 0;
+    flex-basis: 25%;
+    text-align: center;
+
+    img {
+        border-radius: $default-border-radius;
+    }
+}
+
+.button {
+    display: inline-block;
+    background-color: $coffee;
+    border-radius: $default-border-radius;
+    padding: math.div($default-indent,2) $default-indent;
+    margin: 0;
+    color: $white;
+    text-decoration: none;
+    border: 3px solid $coffee;
+
+    &:hover {
+        background-color: $white;
+        color: $coffee;
+    }
+}
+
+footer {
+    color: $white;
+    text-align: center;
+    border-top: $accent-border;
+
+    
+    ul {
+        @include flex-box-row-center;
+
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        @include majorThird(3);
+
+        color: $white;
+        display: block;
+        margin: 0 $default-indent $default-indent*3 $default-indent;
+    }
+}
+
+// PRODUCTS page (products.html)
+.products-content {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+}
+
+// import responsive SASS partial files
+@import "tablet";
+@import "laptop";

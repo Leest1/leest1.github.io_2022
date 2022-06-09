@@ -1,0 +1,61 @@
+@import "format";
+
+// mixin for reusable default main body format
+@mixin default_main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $default-indent*2;
+}
+
+// mixin for calculating font size according to the Major Third type scale
+// conversion sheet (when $default-font-size = 1rem):
+// 1: 1.25rem
+// 2: 1.563rem
+// 3: 1.953rem
+// 4: 2.441rem
+// 5: 3.052rem
+@mixin majorThird($multiplier) {
+    font-size: ($default-font-size * math.pow(1.25, $multiplier));
+}
+
+
+// FLEXBOX MIXINS
+@mixin flex-box-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-box-space-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-box-col {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+@mixin flex-box-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@mixin flex-box-col-center {
+    @include flex-box-col;
+    @include flex-box-center;
+}
+
+@mixin flex-box-row-center {
+    @include flex-box-row;
+    @include flex-box-center;
+}
+
+@mixin flex-box-col-space-between {
+    @include flex-box-col;
+    @include flex-box-space-between;
+}
+
+@mixin flex-box-row-space-between {
+    @include flex-box-row;
+    @include flex-box-space-between;
+}

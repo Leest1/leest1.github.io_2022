@@ -1,0 +1,21 @@
+// large screen | laptop & landscape tablet & larger
+
+@media screen and (min-width: 992px) {
+    .main {
+        article {
+            flex-basis: 45%;
+        }
+    }
+    picture {
+        flex-basis: 50%;
+    }
+    nav {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .products-content {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
