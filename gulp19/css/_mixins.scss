@@ -1,5 +1,3 @@
-@import "format";
-
 // mixin for reusable default main body format
 @mixin default_main {
     max-width: 1200px;
@@ -19,7 +17,7 @@
 }
 
 
-// FLEXBOX MIXINS
+// FLEXBOX FORMAT MIXINS
 @mixin flex-box-center {
     justify-content: center;
     align-items: center;
