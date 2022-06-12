@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    @include majorThird(1);
+    @include fontSizeScaler(1);
 
     background-color: $bright-blue;
     margin: 0;
@@ -35,13 +35,13 @@ h3 {
 }
 
 h1 {
-    @include majorThird(5);
+    @include fontSizeScaler(5);
 
     margin-bottom: 0;
 }
 
 h2 {
-    @include majorThird(3);
+    @include fontSizeScaler(3);
 }
 
 
@@ -79,7 +79,7 @@ nav {
     }
 
     li {
-        @include majorThird(2);
+        @include fontSizeScaler(2);
 
         margin: 0 $default-indent $default-indent $default-indent;
     }
@@ -170,7 +170,7 @@ footer {
     }
 
     a {
-        @include majorThird(3);
+        @include fontSizeScaler(3);
 
         color: $white;
         display: block;
