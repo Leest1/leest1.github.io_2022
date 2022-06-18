@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+  background-color: #FCFAF6;
+  background-image: url("/assets/background-home.png");
+  background-repeat: repeat-y;
+  background-position-x: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.25rem;
+  margin: 0;
+  font-family: "Work Sans";
+  color: #332B26;
+  gap: 9rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+}
+.container .content {
+  grid-column: 2/12;
+}
+
+a {
+  color: #332B26;
+  text-decoration: none;
+}
+
+section {
+  align-self: center;
+}
+
+header {
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #332B26;
+}
+header a {
+  align-self: baseline;
+}
+
+.primary-navigation {
+  background-color: #FCFAF6;
+}
+.primary-navigation .logo {
+  margin: 0 1.5rem;
+  align-self: center;
+}
+.primary-navigation nav {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 2.5rem;
+}
+.primary-navigation nav a {
+  padding: 1.5rem 1.5rem;
+}
+.primary-navigation nav .active {
+  background-color: #F1DDE0;
+}
+
+.header-info {
+  font-family: "Source Code Pro";
+  display: flex;
+  flex-direction: column;
+}
+.header-info h1 {
+  font-size: 4.768371582rem;
+  font-weight: 400;
+  margin: 0;
+}
+.header-info h2 {
+  font-size: 1.5625rem;
+  font-weight: 400;
+}
+.header-info p {
+  font-size: 1.25rem;
+}
+
+.case-studies, .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.case-studies header h1, .contact header h1 {
+  margin: 0;
+}
+
+.card-small {
+  background-color: #FCFCFB;
+  border: 1px solid #332B26;
+  padding: 1.5rem 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  gap: 3rem;
+}
+.card-small img {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid #332B26;
+  border-radius: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-small a {
+  color: #B16007;
+}
+.card-small .cta-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.logo {
+  background-color: #DEABB2;
+  border-radius: 3rem;
+  padding: 0.5em;
+  font-family: "Source Code Pro";
+  text-decoration: none;
+  color: #FCFAF6;
+}
+
+.banner {
+  background-color: #E1F2E5;
+  color: #332B26;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.pt-150 {
+  padding-top: 9.3rem;
+}
+
+.accent-underline {
+  border-bottom: 0.4rem solid #F9CA83;
+}
+
+.accent-text {
+  color: #B16007;
+}/*# sourceMappingURL=main.css.map */

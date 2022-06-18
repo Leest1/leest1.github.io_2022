@@ -1,0 +1,4 @@
+@mixin fontSizeScaler($multiplier) {
+    // to switch to a different scale, change 1.25 to something else
+    font-size: ($default-font-size * math.pow(1.25, $multiplier));
+}
