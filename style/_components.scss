@@ -1,0 +1,48 @@
+// CSS for reusable components
+
+.card-small {
+    background-color: $white;
+    border: 1px solid $black;
+    padding: 1.5rem 3rem;
+    position:relative;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    gap: 3rem;
+
+    
+    img {
+        width: 10rem;
+        height: 10rem;
+        border: 1px solid $black;
+        border-radius: 10rem;
+        object-fit: cover;
+    }
+
+    a {
+        color: $accent-text;
+    }
+
+    .cta-link {
+        position:absolute;                
+        bottom:1rem;                        
+        right:1rem;         
+    }
+}
+
+.logo {
+    background-color: $pink-default;
+    border-radius: 3rem;
+    padding: 0.5em;
+    font-family: 'Source Code Pro';
+    text-decoration: none;
+    color: $primary-main;
+}
+
+.banner {
+    background-color: $green-light;
+    color: $black;
+    padding: 0.5rem;
+    text-align: center;
+}

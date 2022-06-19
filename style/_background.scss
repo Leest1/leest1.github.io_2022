@@ -1,0 +1,33 @@
+// CSS FOR STYLING THE BACKGROUND BLOBS
+
+.blob {
+    position: absolute;
+    min-width: 60vw;
+    height: 100vh;
+    z-index: -1;
+    transform-origin: 50% 50%;
+}
+
+.blob-right {
+    right: 0;
+}
+
+.blob-left {
+    left: 0;
+}
+
+.blob-top-0 {
+    top: 0;
+}
+
+.blob-top-25 {
+    top: 25%;
+}
+
+.blob-top-50 {
+    top: 50%;
+}
+
+.blob-top-75 {
+    top: 75%;
+}
