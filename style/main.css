@@ -68,6 +68,14 @@
   position: absolute;
   min-width: 60vw;
   height: 100vh;
+  z-index: -2;
+  transform-origin: 50% 50%;
+}
+
+.line {
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
   z-index: -1;
   transform-origin: 50% 50%;
 }
@@ -76,12 +84,20 @@
   right: 0;
 }
 
+.blob-left-15 {
+  left: 15%;
+}
+
 .blob-left {
   left: 0;
 }
 
 .blob-top-0 {
   top: 0;
+}
+
+.blob-top-nav {
+  top: 104px;
 }
 
 .blob-top-25 {
@@ -181,10 +197,10 @@ section {
 
 header {
   font-size: 1.25rem;
+  border-bottom: 1px solid #332B26;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #332B26;
 }
 header a {
   align-self: baseline;
@@ -196,21 +212,44 @@ header a {
 
 .primary-navigation {
   background-color: #FCFAF6;
+  flex-direction: column;
 }
 .primary-navigation .logo {
   margin: 0 1.5rem;
   align-self: center;
 }
-.primary-navigation nav {
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  gap: 2.5rem;
+.primary-navigation .menu-toggle {
+  padding: 1rem 2.5rem;
 }
-.primary-navigation nav a {
-  padding: 1.5rem 1.5rem;
+.primary-navigation .primary-nav-list {
+  display: none;
+}
+.primary-navigation nav {
+  border-top: 1px solid #332B26;
+}
+.primary-navigation nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.primary-navigation nav ul li {
+  width: 100%;
+}
+.primary-navigation nav ul li:hover {
+  background-color: #f4efee;
+}
+.primary-navigation nav ul li a {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 2.5rem;
 }
 .primary-navigation nav .active {
+  background-color: #F1DDE0;
+}
+.primary-navigation nav .active:hover {
   background-color: #F1DDE0;
 }
 
@@ -269,6 +308,11 @@ header a {
 
 footer {
   border-top: 1px solid #332B26;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
   background-color: #FCFAF6;
   padding: 3rem 5rem;
 }
@@ -281,6 +325,35 @@ footer {
   color: #B16007;
 }
 
+.hide {
+  display: none !important;
+}
+
 h1 {
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .primary-navigation {
+    flex-direction: row;
+  }
+  .primary-navigation .menu-toggle {
+    display: none;
+  }
+  .primary-navigation .primary-nav-list {
+    display: block !important;
+  }
+  .primary-navigation nav {
+    border: none;
+  }
+  .primary-navigation nav ul {
+    flex-direction: row;
+  }
+  .primary-navigation nav ul li {
+    width: auto;
+  }
+
+  footer {
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=main.css.map */

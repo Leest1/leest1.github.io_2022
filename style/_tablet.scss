@@ -1,0 +1,32 @@
+// medium screen | tablet & landscape mobile
+
+@media screen and (min-width: 768px) {
+    .primary-navigation {
+        flex-direction: row;
+
+        .menu-toggle {
+            display:none;
+        }
+    
+        .primary-nav-list {
+            display: block !important;
+        }
+        
+        nav {
+            border: none;  
+            ul {
+                flex-direction: row;
+
+                li {
+                    width:auto;
+                }
+            }
+        }
+
+        
+    }
+
+    footer {
+        flex-direction: row;
+    }
+}

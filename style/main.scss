@@ -57,11 +57,11 @@ section {
 
 header {
     @include fontSizeScaler(1);
+    @include border-bottom;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid $black;
 
     a {
         align-self: baseline;
@@ -76,24 +76,54 @@ header {
 // primary-navigation
 .primary-navigation {
     background-color: $primary-main;
+    flex-direction: column;
 
     .logo {
         margin: 0 1.5rem;
         align-self: center;
     }
 
+    .menu-toggle {
+        padding: 1rem 2.5rem;
+    }
+
+    .primary-nav-list {
+        display: none;
+    }
+    
     nav {
-        display: flex;
-        flex-direction: row;
-        align-self: center;
-        gap: 2.5rem;
-        
-        a {
-            padding: 1.5rem 1.5rem;
+        @include border-top;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                width:100%;
+                
+                &:hover {
+                    background-color: $primary-main-tint;
+                }
+    
+                a {
+                    display: block;
+                    width: 100%;
+                    padding: 1.5rem 2.5rem;
+                }
+            }
         }
 
         .active {
             background-color: $pink-light;
+
+            &:hover {
+                background-color: $pink-light;
+            }
         }
     }
 }
@@ -161,8 +191,15 @@ header {
 
 // FOOTER
 footer {
-    border-top: 1px solid $black;
+    @include border-top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+
     background-color: $primary-main;
+    
     padding: 3rem 5rem;
 }
 
@@ -175,7 +212,15 @@ footer {
     color: $accent-text;
 }
 
+.hide {
+    display: none !important;
+}
+
 // HEADER TEXT
 h1 {
     margin: 0;
 }
+
+// RESPONSIVE
+@import "tablet";
+@import "laptop";
