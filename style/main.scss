@@ -163,6 +163,10 @@ header {
 
 // SECTIONS: ABOUT
 .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     font-weight: 500;
 }
 
