@@ -64,7 +64,11 @@ header {
     justify-content: space-between;
 
     a {
-        align-self: baseline;
+        align-self: flex-end;
+    }
+
+    h1 {
+        @include fontSizeScaler(3);
     }
 }
 
@@ -154,7 +158,7 @@ header {
 .case-studies, .contact {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 // SECTIONS: ABOUT

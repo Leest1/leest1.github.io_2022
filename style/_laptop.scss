@@ -1,4 +1,25 @@
 // large screen | laptop & landscape tablet & larger
 
 @media screen and (min-width: 992px) {
+    .card-small {     
+        flex-direction: row;
+        gap: 3rem;
+        padding: 2rem 2rem;
+      
+        img {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 10rem;
+        }
+    
+        .cta-link {
+            position:absolute;                
+            bottom:1rem;                        
+            right:1rem;
+        }
+
+        .card-small-contents {
+            padding: 0;
+        }
+    }
 }
