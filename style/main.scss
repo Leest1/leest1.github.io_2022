@@ -58,7 +58,6 @@ section {
 header {
     @include fontSizeScaler(1);
     @include border-bottom;
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -173,6 +172,7 @@ header {
 .about-left {
     background-color: $white;
     border: 1px solid $black;
+    // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     padding: 2.5rem 1.875rem;
 
     h2 {
@@ -190,8 +190,8 @@ header {
 
 .about-img {
     border: 0.75rem solid $pink-default;
-    border-radius: 28rem;
-    max-width: 28rem;
+    border-radius: 75vw;
+    max-width: 75vw;
     height: auto;
     object-fit: cover;
     aspect-ratio: 1/1;

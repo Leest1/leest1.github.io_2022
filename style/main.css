@@ -10,6 +10,10 @@
   padding-top: 4.5rem;
 }
 
+.g-150 {
+  gap: 9.3rem;
+}
+
 .p-50 {
   padding: 3rem;
 }
@@ -60,7 +64,7 @@
   align-items: center;
 }
 
-.align-self-top {
+.align-self-start {
   align-self: flex-start;
 }
 
@@ -68,52 +72,65 @@
   align-self: center;
 }
 
-.blob {
-  position: absolute;
-  min-width: 60vw;
-  height: 100vh;
-  z-index: -2;
-  transform-origin: 50% 50%;
-}
-
-.line {
-  position: absolute;
-  width: 100vw;
-  height: 80vh;
-  z-index: -1;
-  transform-origin: 50% 50%;
-}
-
-.blob-right {
-  right: 0;
-}
-
-.blob-left-15 {
-  left: 15%;
-}
-
-.blob-left {
-  left: 0;
-}
-
-.blob-top-0 {
-  top: 0;
-}
-
-.blob-top-nav {
-  top: 104px;
-}
-
-.blob-top-25 {
-  top: 25%;
-}
-
-.blob-top-50 {
+.background {
+  position: fixed;
   top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.background .blob {
+  min-width: 100vw;
+  position: absolute;
+}
+.background .line {
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 0;
 }
 
-.blob-top-75 {
-  top: 75%;
+.background-line {
+  position: absolute;
+  min-width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -90;
+  background-image: url("/assets/home-sm.svg");
+  background-size: 100%;
+}
+
+.blob1 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  z-index: -1;
+}
+
+.blob2 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  z-index: -2;
+}
+
+.blob3 {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  z-index: -3;
+}
+
+.blob4 {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  z-index: -4;
 }
 
 .card-small {
@@ -309,8 +326,8 @@ header h1 {
 
 .about-img {
   border: 0.75rem solid #DEABB2;
-  border-radius: 28rem;
-  max-width: 28rem;
+  border-radius: 75vw;
+  max-width: 75vw;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -367,6 +384,10 @@ h1 {
   footer {
     flex-direction: row;
   }
+
+  .background-line {
+    background-image: url("/assets/home-md.svg");
+  }
 }
 @media screen and (min-width: 992px) {
   .card-small {
@@ -389,9 +410,24 @@ h1 {
     padding: 0;
   }
 }
+@media screen and (min-width: 1050px) {
+  .background-line {
+    background-image: url("/assets/home-lg.svg");
+  }
+}
 @media screen and (min-width: 1280px) {
   .about {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  .about-img {
+    border-radius: 28rem;
+    max-width: 28rem;
+    height: auto;
+  }
+
+  .background .blob {
+    min-width: 80vw;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -25,9 +25,27 @@
     }
 }
 
+@media screen and (min-width: 1050px) {
+    .background-line {
+        background-image: url("/assets/home-lg.svg");
+    }
+}
+
 @media screen and (min-width: 1280px) {
     .about {
         flex-direction: row;
         align-items: flex-start;
+    }
+
+    .about-img {
+        border-radius: 28rem;
+        max-width: 28rem;
+        height: auto;
+    }
+
+    .background {
+        .blob {
+            min-width: 80vw;
+        }
     }
 }

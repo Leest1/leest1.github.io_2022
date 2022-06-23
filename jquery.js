@@ -1,3 +1,10 @@
+function contentHeight() {
+    var headerHei = $(".primary-navigation").outerHeight() + $(".banner").outerHeight(),
+        footerHei = $("footer").outerHeight(),
+        contentHei = $("#main-content").outerHeight();
+    $("#background-line").css("min-height", headerHei + footerHei + contentHei);
+}
+
 $(document).ready(function(){
     // Hamburger menu toggle
     $("#menu-toggle").on('click', function() {
@@ -5,20 +12,9 @@ $(document).ready(function(){
         $("#primary-nav-list").slideToggle();
     });
 
-    // var screenWidth = $(window).width();
-    // var screenHeight = $(window).height();
+    contentHeight();
+});
 
-    // console.log(screenWidth);
-    // console.log(screenHeight);
-
-    // var  svg = document.getElementById("line-home");
-    // // Get the bounds of the SVG content
-
-    // console.log(svg);
-    // var  bbox = svg.getBBox();
-    // console.log(bbox);
-    // Update the width and height using the size of the contents
-    // svg.setAttribute("width", screenWidth);
-    // svg.setAttribute("height", screenHeight);
-  
+$(window).resize(function() {
+    contentHeight();
 });
