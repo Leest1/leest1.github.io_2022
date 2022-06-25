@@ -72,6 +72,10 @@
   align-self: center;
 }
 
+.align-self-end {
+  align-self: flex-end;
+}
+
 .background {
   position: fixed;
   top: 50%;
@@ -91,12 +95,6 @@
 .background .blob {
   min-width: 100vw;
   position: absolute;
-}
-.background .line {
-  position: absolute;
-  min-width: 100vw;
-  min-height: 100vh;
-  z-index: 0;
 }
 
 .background-line {
@@ -149,15 +147,21 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card-small a {
-  color: #B16007;
-}
 .card-small .cta-link {
-  align-self: end;
-  padding-right: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #B16007;
+  text-transform: uppercase;
+}
+.card-small .cta-link:hover, .card-small .cta-link:focus {
+  font-weight: 600;
 }
 .card-small .card-small-contents {
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 4rem 2rem;
+}
+.card-small P {
+  margin: 1rem 2rem;
 }
 
 .logo {
@@ -174,6 +178,34 @@
   color: #332B26;
   padding: 0.5rem;
   text-align: center;
+}
+.banner a {
+  color: #22664d;
+}
+.banner .close {
+  color: #332B26;
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.btn-default {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #332B26 !important;
+  background-color: #F9CA83;
+  padding: 10px 20px;
+  border: 3px solid #FDF2E1;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 0 0 0 0 #FDF2E1;
+  transition: box-shadow 700ms ease-out;
+}
+.btn-default:hover, .btn-default:focus {
+  font-weight: 400 !important;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 #FDF2E1;
+}
+.btn-default:active {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 #FDF2E1;
 }
 
 html {
@@ -210,6 +242,9 @@ body {
 a {
   color: #332B26;
   text-decoration: none;
+}
+a:hover, a:focus {
+  font-weight: 500;
 }
 
 section {
@@ -354,7 +389,7 @@ footer {
 }
 
 .hide {
-  display: none !important;
+  display: none;
 }
 
 h1 {
@@ -392,14 +427,13 @@ h1 {
 @media screen and (min-width: 992px) {
   .card-small {
     flex-direction: row;
-    gap: 3rem;
+    gap: 1rem;
     padding: 2rem 2rem;
   }
   .card-small img {
     box-shadow: rgba(0, 0, 0, 0.25) 2px 4px 4px;
     width: 10rem;
     height: 10rem;
-    border-radius: 10rem;
   }
   .card-small .cta-link {
     position: absolute;
@@ -407,7 +441,7 @@ h1 {
     right: 1rem;
   }
   .card-small .card-small-contents {
-    padding: 0;
+    padding: 0rem 2rem;
   }
 }
 @media screen and (min-width: 1050px) {

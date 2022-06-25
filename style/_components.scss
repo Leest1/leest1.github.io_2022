@@ -18,20 +18,25 @@
         object-fit: cover;
     }
 
-    a {
-        color: $accent-text;
-    }
-
     .cta-link {
-        // position:absolute;                
-        // bottom:1rem;                        
-        // right:1rem;
-        align-self: end;
-        padding-right: 1rem;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        color: $accent-text;
+        text-transform: uppercase;
+
+        
+        &:hover,&:focus {
+            font-weight: 600;
+        }
     }
 
     .card-small-contents {
-        padding: 1rem 2rem;
+        padding: 1rem 2rem 4rem 2rem;
+    }
+
+    P {
+        margin: 1rem 2rem;
     }
 }
 
@@ -49,4 +54,36 @@
     color: $black;
     padding: 0.5rem;
     text-align: center;
+
+    a {
+        color: $green-text;
+    }
+
+    .close {
+        color: $black;
+        position: absolute;
+        right: 1rem;
+        cursor: pointer;
+    }
+}
+
+.btn-default {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $black !important;
+    background-color: $accent-default;
+    padding: 10px 20px;
+    border: 3px solid $accent-50;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 0 0 0 0 $accent-50;
+    transition: box-shadow 700ms ease-out;
+
+    &:hover,&:focus {
+        font-weight: 400 !important;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $accent-50;
+    }
+
+    &:active {
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $accent-50;
+    }
 }

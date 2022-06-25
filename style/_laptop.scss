@@ -3,14 +3,13 @@
 @media screen and (min-width: 992px) {
     .card-small {     
         flex-direction: row;
-        gap: 3rem;
+        gap: 1rem;
         padding: 2rem 2rem;
       
         img {
             box-shadow: rgba(0, 0, 0, 0.25) 2px 4px 4px;
             width: 10rem;
             height: 10rem;
-            border-radius: 10rem;
         }
     
         .cta-link {
@@ -20,7 +19,7 @@
         }
 
         .card-small-contents {
-            padding: 0;
+            padding: 0rem 2rem;
         }
     }
 }
