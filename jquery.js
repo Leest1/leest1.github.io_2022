@@ -32,6 +32,32 @@ $(document).ready(function(){
         sessionStorage.setItem('bannerClose','true');
         $(".banner").hide();
     });
+
+
+    // icon animations
+    $(".logo").hover(function() {
+        $(".fa-seedling").addClass('fa-bounce');
+    }, function() {
+        $(".fa-seedling").removeClass('fa-bounce');
+    });
+
+    $(".fa-linkedin").hover(function() {
+        $(this).addClass('fa-bounce');
+    }, function() {
+        $(this).removeClass('fa-bounce');
+    });
+
+    $(".fa-dribbble-square").hover(function() {
+        $(this).addClass('fa-bounce');
+    }, function() {
+        $(this).removeClass('fa-bounce');
+    });
+
+    $(".fa-github-square").hover(function() {
+        $(this).addClass('fa-bounce');
+    }, function() {
+        $(this).removeClass('fa-bounce');
+    });
 });
 
 $(window).resize(function() {
