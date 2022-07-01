@@ -159,7 +159,11 @@ header {
 
     h1 {
         @include fontSizeScaler(7);
-        font-weight: 400;
+        font-weight: 400;   
+    }
+
+    .h1-2 {
+        @include fontSizeScaler(6);
     }
     
     h2 {
@@ -186,12 +190,13 @@ header {
     justify-content: flex-start;
     align-items: center;
     font-weight: 500;
+    gap: 8rem;
 }
 
 .about-left {
+    order: 1;
     background-color: $white;
     border: 1px solid $black;
-    // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     padding: 2.5rem 1.875rem;
 
     h2 {
@@ -255,8 +260,9 @@ h1 {
 }
 
 .fa-linkedin, .fa-dribbble-square, .fa-github-square {
-    --fa-animation-duration: 1s;
+    --fa-animation-duration: 1.3s;
     --fa-animation-iteration-count: 1;
+    --fa-bounce-rebound: 0;
 }
 
 // RESPONSIVE

@@ -76,6 +76,10 @@
   align-self: flex-end;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 .background {
   position: fixed;
   top: 50%;
@@ -99,7 +103,7 @@
 
 .background-line {
   position: absolute;
-  min-width: 90vw;
+  min-width: 98vw;
   top: 0;
   left: 0;
   z-index: -90;
@@ -143,7 +147,7 @@
 }
 .card-small img {
   width: 100%;
-  height: 10rem;
+  height: 15rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -162,6 +166,22 @@
 }
 .card-small P {
   margin: 1rem 2rem;
+}
+
+.card-large {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.card-large img {
+  min-width: 100%;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-large .card-large-contents {
+  background-color: #FCFCFB;
+  padding: 2rem;
 }
 
 .logo {
@@ -206,6 +226,18 @@
 }
 .btn-default:active {
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 #FDF2E1;
+}
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+blockquote .quotationMarks {
+  font-size: 2.44140625rem;
+}
+blockquote .author {
+  font-size: 1.25rem;
 }
 
 html {
@@ -333,6 +365,9 @@ header h1 {
   font-size: 4.768371582rem;
   font-weight: 400;
 }
+.header-info .h1-2 {
+  font-size: 3.8146972656rem;
+}
 .header-info h2 {
   font-size: 1.5625rem;
   font-weight: 400;
@@ -353,9 +388,11 @@ header h1 {
   justify-content: flex-start;
   align-items: center;
   font-weight: 500;
+  gap: 8rem;
 }
 
 .about-left {
+  order: 1;
   background-color: #FCFCFB;
   border: 1px solid #332B26;
   padding: 2.5rem 1.875rem;
@@ -414,8 +451,9 @@ h1 {
 }
 
 .fa-linkedin, .fa-dribbble-square, .fa-github-square {
-  --fa-animation-duration: 1s;
+  --fa-animation-duration: 1.3s;
   --fa-animation-iteration-count: 1;
+  --fa-bounce-rebound: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -454,8 +492,8 @@ h1 {
   }
   .card-small img {
     box-shadow: rgba(0, 0, 0, 0.25) 2px 4px 4px;
-    width: 10rem;
-    height: 10rem;
+    width: 20rem;
+    height: 20rem;
   }
   .card-small .cta-link {
     position: absolute;
@@ -464,6 +502,25 @@ h1 {
   }
   .card-small .card-small-contents {
     padding: 0rem 2rem;
+  }
+
+  .card-large {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    box-shadow: none;
+  }
+  .card-large img {
+    min-width: 30rem;
+    min-height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 2px 4px 4px;
+  }
+  .card-large .card-large-contents {
+    background-color: #FCFCFB;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 2px 4px 4px;
   }
 }
 @media screen and (min-width: 1050px) {
@@ -475,6 +532,10 @@ h1 {
   .about {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  .about-left {
+    order: 0;
   }
 
   .about-img {

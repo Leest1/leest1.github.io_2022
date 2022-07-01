@@ -14,7 +14,7 @@
   
     img {
         width: 100%;
-        height: 10rem;
+        height: 15rem;
         object-fit: cover;
     }
 
@@ -37,6 +37,23 @@
 
     P {
         margin: 1rem 2rem;
+    }
+}
+
+.card-large {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+    img {
+        min-width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
+
+    .card-large-contents {
+        background-color: $white;
+        padding: 2rem;
     }
 }
 
@@ -85,5 +102,18 @@
 
     &:active {
         box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $accent-50;
+    }
+}
+
+blockquote {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .quotationMarks {
+        @include fontSizeScaler(4);
+    }
+
+    .author {
+        @include fontSizeScaler(1);
     }
 }
