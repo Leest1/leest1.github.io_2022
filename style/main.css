@@ -174,7 +174,7 @@
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .card-large img {
-  min-width: 100%;
+  width: 100%;
   height: 20rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -182,6 +182,9 @@
 .card-large .card-large-contents {
   background-color: #FCFCFB;
   padding: 2rem;
+}
+.card-large .card-large-contents .tools-used {
+  margin: 3rem 0rem;
 }
 
 .logo {
@@ -256,7 +259,7 @@ blockquote .author {
   position: absolute;
   z-index: 1;
   bottom: 150%;
-  left: 50%;
+  left: 70%;
   margin-left: -75px;
   opacity: 0;
   transition: opacity 0.3s;
@@ -432,19 +435,30 @@ header h1 {
 
 .about-left {
   order: 1;
+}
+.about-left .sub-section {
   background-color: #FCFCFB;
-  border: 1px solid #332B26;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
   padding: 2.5rem 1.875rem;
 }
-.about-left h2 {
+.about-left .sub-section h2 {
   font-size: 1.953125rem;
   margin: 0;
   font-weight: 500;
 }
-.about-left .sub-h2 {
+.about-left .sub-section .sub-h2 {
   font-size: 1.5625rem;
   font-family: "Source Code Pro";
   font-weighT: 600;
+}
+.about-left .sub-section h3 {
+  font-weight: 400;
+}
+.about-left .sub-section ul {
+  list-style: none;
+}
+.about-left .sub-section ul li {
+  margin: 1.5rem 0rem;
 }
 
 .about-img {
@@ -509,7 +523,7 @@ h1 {
 
 .fa-download {
   cursor: pointer;
-  color: #332B26;
+  color: #B16007;
 }
 
 .fa-seedling {
@@ -571,8 +585,8 @@ h1 {
     box-shadow: none;
   }
   .card-large img {
-    min-width: 30rem;
-    min-height: 100%;
+    width: 30rem;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     box-shadow: rgba(0, 0, 0, 0.25) 2px 4px 4px;
@@ -596,6 +610,10 @@ h1 {
 
   .about-left {
     order: 0;
+  }
+
+  .about-right {
+    align-self: flex-start;
   }
 
   .about-img {
