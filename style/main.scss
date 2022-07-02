@@ -265,6 +265,27 @@ h1 {
     --fa-bounce-rebound: 0;
 }
 
+.fa-solid {
+    color: $brown;
+}
+
+.fa-brands {
+    color: $brown;
+}
+
+.fa-copy {
+    cursor: pointer;
+}
+
+.fa-download {
+    cursor: pointer;
+    color: $black;
+}
+
+.fa-seedling {
+    color: $white;
+}
+
 // RESPONSIVE
 @import "tablet";
 @import "laptop";

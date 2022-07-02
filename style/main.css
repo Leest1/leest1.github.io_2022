@@ -240,6 +240,45 @@ blockquote .author {
   font-size: 1.25rem;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 8rem;
+  background-color: rgba(51, 43, 38, 0.8);
+  color: #FCFCFB;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: 300;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(51, 43, 38, 0.8) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 html {
   box-sizing: border-box;
   background-color: #FCFAF6;
@@ -454,6 +493,27 @@ h1 {
   --fa-animation-duration: 1.3s;
   --fa-animation-iteration-count: 1;
   --fa-bounce-rebound: 0;
+}
+
+.fa-solid {
+  color: #564d48;
+}
+
+.fa-brands {
+  color: #564d48;
+}
+
+.fa-copy {
+  cursor: pointer;
+}
+
+.fa-download {
+  cursor: pointer;
+  color: #332B26;
+}
+
+.fa-seedling {
+  color: #FCFCFB;
 }
 
 @media screen and (min-width: 768px) {
