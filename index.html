@@ -22,13 +22,15 @@
     <link href="style/main.css" rel="stylesheet" />
     <script src="jquery-3.6.0.dev.js"></script>
     <script src="jquery.js"></script>
+    <script src="scripts/home-case-studies.js"></script>
+    <script src="scripts/links.js"></script>
   </head>
 
   <body>
     <!-- header -->
     <div class="banner hide">
       Looking for work!
-      <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+      <a target="_blank" rel="noopener noreferrer" class="resume">
         View my resume
       </a>
       <a class="close" id="bannerXMark">
@@ -78,55 +80,7 @@
               <span aria-hidden="true" class="fa-solid fa-chevron-right"></span
             ></a>
           </header>
-          <div class="card-small">
-            <img
-              src="assets/case-studies/mdes/title-image-square.png"
-              style="object-position: 0% 30%"
-            />
-            <div class="card-small-contents">
-              <h1>MDES Website Redesign</h1>
-              <p>
-                Redesigned the MDES website in order to improve the process of
-                applying for unemployment aid. Goal was to increase conversion
-                rate of application completion and alleviate any questions or
-                concerns by rethinking the process and content hierarchy.
-              </p>
-              <br>
-              <p><small>
-                TOOLS USED: User journey, proto-persona, site map, design principles, gestalt laws, A/B testing, usability testing, brand, style guide, Figma
-              </small></p>
-            </div>
-            <a href="" class="cta-link"
-              >CONTINUE READING
-              <span aria-hidden="true" class="fa-solid fa-chevron-right"></span>
-            </a>
-          </div>
-          <div class="card-small">
-            <img
-              src="assets/case-studies/nomnoms/nomnoms.jpg"
-              style="object-position: 0% 40%"
-            />
-            <div class="card-small-contents">
-              <h1>Nom Noms</h1>
-              <p>
-                A social media application with the goal of connecting
-                restaurant owners and their customers in a personal way, in
-                order to tackle the wicked problem of commerce within the food
-                industry.
-              </p>
-              <br>
-              <p><small>
-                TOOLS USED: user interviews, user surveys, proto-persona, creative matrix, competitive analysis, user journeys, Figma
-              </small></p>
-            </div>
-            <a
-              href="https://drive.google.com/file/d/1Jv69attDovKJIbFtwjBwZ3nryIQ2AZK-/view?usp=sharing"
-              class="cta-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              >CONTINUE READING
-              <span aria-hidden="true" class="fa-solid fa-chevron-right"></span>
-            </a>
+          <div class="case-studies" id="latest-work">
           </div>
         </section>
         <section class="contact">
@@ -146,7 +100,7 @@
               </p>
               <p>
                 Email me at:
-                <a href="mailto: shannontlee96@gmail.com">
+                <a class="email">
                   <u>shannontlee96@gmail.com</u>
                 </a>
                 <span class="tooltip">
@@ -162,10 +116,9 @@
             </div>
             <div>
               <a
-                href="/assets/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="cta-link btn-default"
+                class="cta-link btn-default resume"
                 >View my resume</a
               >
             </div>
@@ -180,24 +133,24 @@
       <div class="column align-items-center">
         <div class="row g-25">
           <a
-            href="https://www.linkedin.com/in/shannon-lee-9108a3105/"
             target="_blank"
             rel="noopener noreferrer"
+            class="linkedin"
             ><span aria-hidden="true" class="fa-brands fa-linkedin fa-2x"></span
           ></a>
           <a
-            href="https://dribbble.com/Shannonigans"
             target="_blank"
             rel="noopener noreferrer"
+            class="dribbble"
             ><span
               aria-hidden="true"
               class="fa-brands fa-dribbble-square fa-2x"
             ></span
           ></a>
           <a
-            href="https://github.com/Leest1/"
             target="_blank"
             rel="noopener noreferrer"
+            class="github"
             ><span
               aria-hidden="true"
               class="fa-brands fa-github-square fa-2x"
@@ -205,7 +158,7 @@
           ></a>
         </div>
         <p>
-          <a href="mailto: shannontlee96@gmail.com">
+          <a class="email">
             <u>shannontlee96@gmail.com</u>
           </a>
         </p>

@@ -1,0 +1,18 @@
+{
+    "skills": [
+        {
+            "title": "Technical",
+            "lines": [
+                ["Atomic Design", "Visual Prototyping", "Wireframing", "Interaction Design", "UI Design", "Heuristic Evaluation"],
+                ["Usability Testing", "User Testing", "User Research", "A/B Testing"],
+                ["Python", "Java", "C++", "HTML5", "CSS", "Javascript", "JQuery", "SQL", "Bootstrap", "Angular"]
+            ]
+        },
+        {
+            "title": "Personal",
+            "lines": [
+                ["Adaptable", "Creative", "Empathetic", "Organized", "Strong Communicator", "Collaborator", "Detail-Oriented"]
+            ]
+        }
+    ]
+}

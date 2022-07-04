@@ -22,13 +22,15 @@
     <link href="style/main.css" rel="stylesheet" />
     <script src="jquery-3.6.0.dev.js"></script>
     <script src="jquery.js"></script>
+    <script src="scripts/links.js"></script>
+    <script src="scripts/skills.js"></script>
   </head>
 
   <body>
     <!-- header -->
     <div class="banner hide">
       Looking for work!
-      <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+      <a class="resume" target="_blank" rel="noopener noreferrer">
         View my resume
       </a>
       <a class="close" id="bannerXMark">
@@ -96,32 +98,10 @@
                 </p>
               </div>
             </div>
-            <div class="sub-section">
+            <div class="sub-section" id="skills">
               <h2>
                 SKILLS
               </h2>
-              <section>
-                <h3>Technical</h3>
-                <ul>
-                  <li>
-                    Atomic Design, Visual Prototyping, Wireframing, Interaction Design, UI Design, Heuristic Evaluation
-                  </li>
-                  <li>
-                    Usability Testing, User Testing, User Research, A/B Testing
-                  </li>
-                  <li>
-                    Python, Java, C++, HTML5, CSS, Javascript, JQuery, SQL, Bootstrap, Angular
-                  </li>
-                </ul>
-              </section>
-              <section>
-                <h3>Personal</h3>
-                <ul>
-                  <li>
-                    Adaptable, Creative, Empathetic, Organized, Strong Communicator, Collaborator, Detail-Oriented
-                  </li>
-                </ul>
-              </section>
             </div>
           </section>
 
@@ -138,21 +118,21 @@
             <div class="column align-items-center g-16">
               <div><small>(she/her)</small></div>
               <div class="row g-25">
-                <a href="https://www.linkedin.com/in/shannon-lee-9108a3105/" 
+                <a class="linkedin"
                 target="_blank" rel="noopener noreferrer"
                   ><span
                     aria-hidden="true"
                     class="fa-brands fa-linkedin fa-3x"
                   ></span>
                 </a>
-                <a href="https://dribbble.com/Shannonigans" 
+                <a class="dribbble"
                 target="_blank" rel="noopener noreferrer"
                   ><span
                     aria-hidden="true"
                     class="fa-brands fa-dribbble-square fa-3x"
                   ></span>
                 </a>
-                <a href="https://github.com/Leest1/" 
+                <a class="github"
                 target="_blank" rel="noopener noreferrer"
                   ><span
                     aria-hidden="true"
@@ -160,26 +140,25 @@
                   ></span>
                 </a>
               </div>
-              <p class="m-0">
+              <p class="m-0" id="location">
                 <span
                   aria-hidden="true"
                   class="fa-solid fa-location-dot"
                 ></span>
-                Sacramento, CA
               </p>
-              <a href="mailto: shannontlee96@gmail.com"
+              <a class="email"
                 ><p class="m-0">
                   <span aria-hidden="true" class="fa-solid fa-envelope"></span>
                   <u>shannontlee96@gmail.com</u>
                 </p>
               </a>
-              <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer"
+              <a class="resume" target="_blank" rel="noopener noreferrer"
                 ><p class="m-0 accent-text">
                   VIEW MY RESUME
                 </p>
               </a>
               <div class="tooltip">
-                <a href="/assets/resume.pdf" download>
+                <a class="resume" download>
                   <span aria-hidden="true" class="fa-solid fa-download fa-2x">
                   </span>
                   <span class="tooltiptext" id="myTooltip">Download Resume</span>
@@ -195,21 +174,21 @@
       <div class="">SHANNON LEE</div>
       <div class="column align-items-center">
         <div class="row g-25">
-          <a href="https://www.linkedin.com/in/shannon-lee-9108a3105/" 
+          <a class="linkedin"
             target="_blank" rel="noopener noreferrer"
               ><span
                 aria-hidden="true"
                 class="fa-brands fa-linkedin fa-2x"
               ></span
           ></a>
-          <a href="https://dribbble.com/Shannonigans" 
+          <a class="dribbble"
             target="_blank" rel="noopener noreferrer"
               ><span
                 aria-hidden="true"
                 class="fa-brands fa-dribbble-square fa-2x"
               ></span
           ></a>
-          <a href="https://github.com/Leest1/" 
+          <a class="github"
             target="_blank" rel="noopener noreferrer"
               ><span
                 aria-hidden="true"
@@ -217,7 +196,7 @@
               ></span
           ></a>
         </div>
-        <p><a href="mailto: shannontlee96@gmail.com">
+        <p><a class="email">
           <u>shannontlee96@gmail.com</u>
           </a>
         </p>

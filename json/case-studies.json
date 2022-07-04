@@ -1,0 +1,32 @@
+{
+    "caseStudies":
+        [
+            {
+                "name": "MDES Website Redesign",
+                "shortSummary": "",
+                "summary": "Redesigned the MDES website in order to improve the process of applying for unemployment aid. Goal was to increase conversion rate of application completion and alleviate any questions or concerns by rethinking the process and content hierarchy.",
+                "tools": ["user journey", "proto-persona", "site map", "design principles", "gestalt laws", "A/B testing", "usability testing", "brand", "style guide", "Figma"],
+                "url": "",
+                "img": "assets/case-studies/mdes/title-image-square.png",
+                "imgAlt": "A mockup of three screens showing the MDES redesign wireframes"
+            },
+            {
+                "name": "Nom Noms",
+                "shortSummary": "",
+                "summary": "A social media application with the goal of connecting restaurant owners and their customers in a personal way, in order to tackle the wicked problem of commerce within the food industry.",
+                "tools": ["user interviews", "user surveys", "proto-persona", "creative matrix", "competitive analysis", "user journeys", "Figma"],
+                "url": "https://drive.google.com/file/d/1Jv69attDovKJIbFtwjBwZ3nryIQ2AZK-/view?usp=sharing",
+                "img": "assets/case-studies/nomnoms/nomnoms.jpg",
+                "imgAlt": "A mockup of two phones displaying the application (NomNoms) wireframes"
+            },
+            {
+                "name": "Prado Health (mini)",
+                "shortSummary": "",
+                "summary": "Rebrand of Prado Health, a fictitious startup company whose aim is to make it easy and worry-free for their customers to get to the doctor. Identify a brand personality and iterate the wireframes to reflect the new branding.",
+                "tools": ["brand", "mood board", "60-30-10 rule", "color theory", "color symbolism", "style guide", "visual hierarchy", "A/B testing", "Figma"],
+                "url": "https://drive.google.com/file/d/16eJtUMot40QlGE2W_Ufn4iOuAONr2p7m/view?usp=sharing",
+                "img": "assets/case-studies/prado/pradohealth-square.png",
+                "imgAlt": "A mockup of PradoHealth application, along with a plant and some lemons"
+            }
+        ]
+}
