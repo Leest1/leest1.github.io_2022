@@ -163,3 +163,18 @@ blockquote {
     visibility: visible;
     opacity: 1;
 }
+
+#case-study-search {
+    width: 25rem;
+    height: 1.5rem;
+    padding: 1rem;
+    border-radius: 3px;
+    border: 1px solid $black;
+    text-align: end;
+
+    font-family: 'Work Sans';
+
+    &:focus {
+        outline-color: $pink-shadow;
+    }
+}

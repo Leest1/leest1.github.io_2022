@@ -8,7 +8,9 @@
                 "tools": ["user journey", "proto-persona", "site map", "design principles", "gestalt laws", "A/B testing", "usability testing", "brand", "style guide", "Figma"],
                 "url": "",
                 "img": "assets/case-studies/mdes/title-image-square.png",
-                "imgAlt": "A mockup of three screens showing the MDES redesign wireframes"
+                "imgAlt": "A mockup of three screens showing the MDES redesign wireframes",
+                "id": "mdes",
+                "tags": ["mdes","user journey", "proto-persona", "site map", "design principles", "gestalt laws", "A/B testing", "usability testing", "branding", "style guide", "Figma", "ui designer", "team project", "user testing"]
             },
             {
                 "name": "Nom Noms",
@@ -17,16 +19,20 @@
                 "tools": ["user interviews", "user surveys", "proto-persona", "creative matrix", "competitive analysis", "user journeys", "Figma"],
                 "url": "https://drive.google.com/file/d/1Jv69attDovKJIbFtwjBwZ3nryIQ2AZK-/view?usp=sharing",
                 "img": "assets/case-studies/nomnoms/nomnoms.jpg",
-                "imgAlt": "A mockup of two phones displaying the application (NomNoms) wireframes"
+                "imgAlt": "A mockup of two phones displaying the application (NomNoms) wireframes",
+                "id": "nomnoms",
+                "tags": ["nomnoms","user interviews", "user surveys", "proto-persona", "creative matrix", "competitive analysis", "user journeys", "Figma", "ux researcher", "ui designer", "team project", "user testing", "user researcher"]
             },
             {
                 "name": "Prado Health (mini)",
                 "shortSummary": "",
                 "summary": "Rebrand of Prado Health, a fictitious startup company whose aim is to make it easy and worry-free for their customers to get to the doctor. Identify a brand personality and iterate the wireframes to reflect the new branding.",
-                "tools": ["brand", "mood board", "60-30-10 rule", "color theory", "color symbolism", "style guide", "visual hierarchy", "A/B testing", "Figma"],
+                "tools": ["brand", "mood board", "60-30-10 rule", "color theory", "color symbolism", "style guide", "visual hierarchy", "A/B testing", "Figma", "ui designer"],
                 "url": "https://drive.google.com/file/d/16eJtUMot40QlGE2W_Ufn4iOuAONr2p7m/view?usp=sharing",
                 "img": "assets/case-studies/prado/pradohealth-square.png",
-                "imgAlt": "A mockup of PradoHealth application, along with a plant and some lemons"
+                "imgAlt": "A mockup of PradoHealth application, along with a plant and some lemons",
+                "id": "pradohealth",
+                "tags": ["pradohealth", "branding", "mood board", "60-30-10 rule", "color theory", "color symbolism", "style guide", "visual hierarchy", "A/B testing", "Figma"]
             }
         ]
 }
