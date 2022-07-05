@@ -1,6 +1,15 @@
 var allStudies = [];
 var currentStudies = [];
 
+// resize background
+function contentHeight() {
+    // get the height of header, footer, and main content to set the height of the background
+    var headerHei = $(".primary-navigation").outerHeight() + $(".banner").outerHeight(),
+        footerHei = $("footer").outerHeight(),
+        contentHei = $("#main-content").outerHeight();
+    $(".background-line").css("min-height", headerHei + footerHei + contentHei);
+}
+
 // remove all case studies
 function clearCaseStudies() {
     for (let i in currentStudies) {
@@ -39,6 +48,7 @@ function updateCaseStudies() {
             }
         }
     }
+    contentHeight();
 }
 
 $(document).ready(function () {
