@@ -164,17 +164,27 @@ blockquote {
     opacity: 1;
 }
 
-#case-study-search {
-    width: 25rem;
-    height: 1.5rem;
-    padding: 1rem;
-    border-radius: 3px;
-    border: 1px solid $black;
-    text-align: end;
+.search {
+    position: relative;
 
-    font-family: 'Work Sans';
+    #case-study-search {
+        width: 20rem;
+        height: 2rem;
+        padding: 1rem 2rem 1rem 0.5rem;
+        border-radius: 3px;
+        border: 1px solid $black;
+        text-align: end;
 
-    &:focus {
-        outline-color: $pink-shadow;
+        font-family: 'Work Sans';
+
+        &:focus {
+            outline-color: $pink-shadow;
+        }
+    }
+
+    #search-close {
+        position: absolute;
+        right: 0.75rem;
+        cursor: pointer;
     }
 }

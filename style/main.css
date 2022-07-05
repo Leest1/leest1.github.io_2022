@@ -290,17 +290,25 @@ blockquote .author {
   opacity: 1;
 }
 
-#case-study-search {
-  width: 25rem;
-  height: 1.5rem;
-  padding: 1rem;
+.search {
+  position: relative;
+}
+.search #case-study-search {
+  width: 20rem;
+  height: 2rem;
+  padding: 1rem 2rem 1rem 0.5rem;
   border-radius: 3px;
   border: 1px solid #332B26;
   text-align: end;
   font-family: "Work Sans";
 }
-#case-study-search:focus {
+.search #case-study-search:focus {
   outline-color: #AF9696;
+}
+.search #search-close {
+  position: absolute;
+  right: 0.75rem;
+  cursor: pointer;
 }
 
 html {
