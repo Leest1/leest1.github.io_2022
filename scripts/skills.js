@@ -1,3 +1,11 @@
+function contentHeight() {
+    // get the height of header, footer, and main content to set the height of the background
+    var headerHei = $(".primary-navigation").outerHeight() + $(".banner").outerHeight(),
+        footerHei = $("footer").outerHeight(),
+        contentHei = $("#main-content").outerHeight();
+    $(".background-line").css("min-height", headerHei + footerHei + contentHei);
+}
+
 // load skills JSON into about.html
 $(document).ready(function () {
     $.getJSON("../../json/skills.json", function(json) {
@@ -17,6 +25,7 @@ $(document).ready(function () {
                 $("<section><h3>" + skills.title + "</h3><ul>" +
                 skillStrings + "</ul></section>")
             );
+            contentHeight();
         }
     });
 });

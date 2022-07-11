@@ -180,7 +180,7 @@ header {
 .case-studies, .contact {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 3rem;
 }
 
 // SECTIONS: ABOUT
@@ -195,10 +195,18 @@ header {
 
 .about-left {
     order: 1;
+    position: relative;
     .sub-section {
+        border-radius: 0.2rem;
         background-color: $white;
-        box-shadow: 8px 8px 16px rgba($color: #000000, $alpha: 0.25);
+        border: none;
         padding: 2.5rem 1.875rem;
+        position: relative;
+
+        -webkit-box-shadow: 0 0 5px $black-50;
+        box-shadow: 0 0 5px $black-50;
+        transition: all 450ms ease;
+        -webkit-transition: all 450ms ease;
 
         h2 {
             @include fontSizeScaler(3);
@@ -206,13 +214,8 @@ header {
             font-weight: 500;
         }
 
-        .sub-h2 {
-            @include fontSizeScaler(2);
-            font-family: 'Source Code Pro';
-            font-weighT: 600;
-        }
-
         h3 {
+            @include fontSizeScaler(1);
             font-weight: 400;
         }
 
@@ -222,6 +225,78 @@ header {
                 margin: 1.5rem 0rem;
             }
         }
+        
+        p {
+            font-weight: 400;
+        }
+        .sub-section-content {
+            z-index: 100;
+        }
+
+        &:before,
+        &:after {
+            border-color: transparent;
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-style: solid;
+            border-radius: 0.2rem;
+            border-width: 0;
+            content: "";
+            height: 24px;
+            position: absolute;
+            width: 24px;
+        }
+        &:before {
+            border-color: $black-50;
+            border-left-width: 0px;
+            border-bottom-width: 0px;
+            right: -3px;
+            top: -3px;
+        }
+        &:after {
+            border-color: $black-50;
+            border-top-width: 0px;
+            border-right-width: 0px;
+            bottom: -3px;
+            left: -3px;
+        }
+        &:hover:before,
+        &.hover:before,
+        &:hover:after,
+        &.hover:after {
+            height: 98%;
+            width: 99%;
+        }
+        &:hover:before,
+        &.hover:before{
+            border-left-width: 2px;
+            border-bottom-width: 2px;
+        }
+        &:hover:after,
+        &.hover:after {
+            border-top-width: 2px;
+            border-right-width: 2px;
+        }
+    }
+    
+    #skills {
+        h3 {
+            font-weight: 500;
+        }
+        li {
+            font-weight: 400;
+        }
+    }
+
+    
+    &:after {
+        position: absolute;
+        content: '';
+        z-index: -1;
+        left: 1rem;
+        background-color: $black-50;
+        width: 0.25rem;
+        height: 100%;
     }
 }
 

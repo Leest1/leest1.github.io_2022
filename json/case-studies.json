@@ -3,7 +3,7 @@
         [
             {
                 "name": "MDES Website Redesign",
-                "shortSummary": "",
+                "shortSummary": "Redesign Mississippi's unemployment website to help streamline the application process for unemployment aid",
                 "summary": "Redesigned the MDES website in order to improve the process of applying for unemployment aid. Goal was to increase conversion rate of application completion and alleviate any questions or concerns by rethinking the process and content hierarchy.",
                 "tools": ["user journey", "proto-persona", "site map", "design principles", "gestalt laws", "A/B testing", "usability testing", "brand", "style guide", "Figma"],
                 "url": "https://drive.google.com/file/d/1x6Zn6KZFGBbql3Mb_U15gcWo6A8fLNHZ/view?usp=sharing",
@@ -14,7 +14,7 @@
             },
             {
                 "name": "Nom Noms",
-                "shortSummary": "",
+                "shortSummary": "A social media application that connects foodies and restaurants through friends and photos",
                 "summary": "A social media application with the goal of connecting restaurant owners and their customers in a personal way, in order to tackle the wicked problem of commerce within the food industry.",
                 "tools": ["user interviews", "user surveys", "proto-persona", "creative matrix", "competitive analysis", "user journeys", "Figma"],
                 "url": "https://drive.google.com/file/d/1Jv69attDovKJIbFtwjBwZ3nryIQ2AZK-/view?usp=sharing",
@@ -25,7 +25,7 @@
             },
             {
                 "name": "Prado Health (mini)",
-                "shortSummary": "",
+                "shortSummary": "Prado Health rebrand to ensure users feel welcomed and comfortable using their medical application",
                 "summary": "Rebrand of Prado Health, a fictitious startup company whose aim is to make it easy and worry-free for their customers to get to the doctor. Identify a brand personality and iterate the wireframes to reflect the new branding.",
                 "tools": ["brand", "mood board", "60-30-10 rule", "color theory", "color symbolism", "style guide", "visual hierarchy", "A/B testing", "Figma", "ui designer"],
                 "url": "https://drive.google.com/file/d/16eJtUMot40QlGE2W_Ufn4iOuAONr2p7m/view?usp=sharing",

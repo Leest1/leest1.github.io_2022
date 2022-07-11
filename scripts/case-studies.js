@@ -7,7 +7,7 @@ function contentHeight() {
     var headerHei = $(".primary-navigation").outerHeight() + $(".banner").outerHeight(),
         footerHei = $("footer").outerHeight(),
         contentHei = $("#main-content").outerHeight();
-    $(".background-line").css("min-height", headerHei + footerHei + contentHei);
+    $(".background-line").css("min-height", headerHei + footerHei + contentHei + 180);
 }
 
 // remove all case studies
@@ -32,10 +32,10 @@ function addCaseStudy(caseStudy) {
         + caseStudy.url +"'>READ MORE</a>" +
         "</div></div></div>")
     );
+    contentHeight();
 }
 
 function updateCaseStudies() {
-    console.log('update');
     clearCaseStudies();
 
     let inputVal = $('#case-study-search').val();
@@ -48,7 +48,6 @@ function updateCaseStudies() {
             }
         }
     }
-    contentHeight();
 }
 
 $(document).ready(function () {
@@ -65,9 +64,9 @@ $(document).ready(function () {
             
 
             $('#case-studies').append(
-                $("<div class='card-large' id='"+ caseStudy.id +"'>"+
+                $("<div class='card-small' id='"+ caseStudy.id +"'>"+
                 "<img src='"+ caseStudy.img +"' alt='"+ caseStudy.imgAlt +"'>"+
-                "<div class='card-large-contents'>" +
+                "<div class='card-small-contents'>" +
                 "<h1>" + caseStudy.name + "</h1>" +
                 "<p>" + caseStudy.summary + "</p>" +
                 "<p class='tools-used'><small>TOOLS USED: " + toolsUsed + "</small></p>" +
@@ -75,6 +74,7 @@ $(document).ready(function () {
                 + caseStudy.url +"'>READ MORE</a>" +
                 "</div></div></div>")
             );
+            contentHeight();
         }
     });
 

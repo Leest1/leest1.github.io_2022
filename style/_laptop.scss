@@ -4,12 +4,10 @@
     .card-small {     
         flex-direction: row;
         gap: 1rem;
-        padding: 2rem 2rem;
       
         img {
-            box-shadow: rgba(0, 0, 0, 0.25) 2px 4px 4px;
-            width: 20rem;
-            height: 20rem;
+            width: 25rem;
+            height: auto;
         }
     
         .cta-link {
@@ -19,7 +17,10 @@
         }
 
         .card-small-contents {
-            padding: 0rem 2rem;
+            padding: 2rem 2rem 4.5rem 2rem;
+            h1 {
+                @include fontSizeScaler(4);
+            }
         }
     }
 

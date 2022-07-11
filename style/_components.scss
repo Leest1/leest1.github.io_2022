@@ -8,9 +8,14 @@
     flex-direction: column;
     align-items: top;
     gap: 1rem;
-    padding-bottom: 1rem;
+    border-radius: 0.2rem;
+    border: none;
+    
+    -webkit-box-shadow: 0 0 5px $black-50;
+    box-shadow: 0 0 5px $black-50;
 
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    transition: all 450ms ease;
+    -webkit-transition: all 450ms ease;
   
     img {
         width: 100%;
@@ -25,25 +30,34 @@
         color: $accent-text;
         text-transform: uppercase;
 
-        
         &:hover,&:focus {
             font-weight: 600;
         }
     }
 
     .card-small-contents {
-        padding: 1rem 2rem 4rem 2rem;
+        padding: 1rem 2rem 4.5rem 2rem;
     }
 
     P {
         margin: 1rem 2rem;
+    }
+
+    .fa-chevron-right {
+        color: $accent-text;
+    }
+
+    &:hover {
+        -webkit-box-shadow: 0 0 10px $black-50;
+        box-shadow: 0 0 10px $black-50;
     }
 }
 
 .card-large {
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    -webkit-box-shadow: 0 0 5px $black-50;
+        box-shadow: 0 0 5px $black-50;
 
     img {
         width: 100%;
@@ -97,9 +111,8 @@
     background-color: $accent-default;
     padding: 10px 20px;
     border: 3px solid $accent-50;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 0 0 0 0 $accent-50;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 0 0 0 0 $accent-default;
     transition: box-shadow 700ms ease-out;
-
     &:hover,&:focus {
         font-weight: 400 !important;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $accent-50;
@@ -111,16 +124,16 @@
 }
 
 .btn-secondary {
-    background-color: $blue-default;
-    border: 3px solid $blue-light;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 0 0 0 0 $blue-light;
+    background-color: $accent-50;
+    border: 3px solid $accent-default;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 0 0 0 0 $accent-50;
 
     &:hover,&:focus {
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $blue-light;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $accent-default;
     }
 
     &:active {
-        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $blue-light;
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $accent-default;
     }
 }
 
@@ -191,10 +204,6 @@ blockquote {
         text-align: end;
 
         font-family: 'Work Sans';
-
-        &:focus {
-            outline-color: $pink-shadow;
-        }
     }
 
     #search-close {
