@@ -8,6 +8,7 @@ function contentHeight() {
         footerHei = $("footer").outerHeight(),
         contentHei = $("#main-content").outerHeight();
     $(".background-line").css("min-height", headerHei + footerHei + contentHei + 180);
+    console.log(headerHei, footerHei, contentHei);
 }
 
 // remove all case studies

@@ -254,7 +254,7 @@
 
 .btn-secondary {
   background-color: #FDF2E1;
-  border: 3px solid #F9CA83;
+  border: 3px solid #fbdfb4;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 0 0 0 0 #FDF2E1;
 }
 .btn-secondary:hover, .btn-secondary:focus {
@@ -382,10 +382,6 @@ a {
 }
 a:hover, a:focus {
   font-weight: 500;
-}
-
-section {
-  align-self: center;
 }
 
 header {

@@ -70,10 +70,6 @@ a {
     }
 }
 
-section {
-    align-self: center;
-}
-
 header {
     @include fontSizeScaler(1);
     @include border-bottom;

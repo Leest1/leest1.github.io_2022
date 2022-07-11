@@ -4,7 +4,6 @@ function contentHeight() {
         footerHei = $("footer").outerHeight(),
         contentHei = $("#main-content").outerHeight();
     $(".background-line").css("min-height", headerHei + footerHei + contentHei);
-    console.log(headerHei, footerHei, contentHei);
 }
 
 function copyToClipboard(copyString) {
