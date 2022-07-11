@@ -43,6 +43,12 @@ $(document).ready(function(){
         $(".banner").hide();
     });
 
+    $("#bannerXMark").on('keypress', function(e) {
+        if(e.which == 13) {
+            sessionStorage.setItem('bannerClose','true');
+            $(".banner").hide();
+        }
+    });
 
     // ICON ANIMATIONS
     $(".logo").hover(function() {

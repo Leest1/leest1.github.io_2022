@@ -110,6 +110,21 @@
     }
 }
 
+.btn-secondary {
+    background-color: $blue-default;
+    border: 3px solid $blue-light;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 0 0 0 0 $blue-light;
+
+    &:hover,&:focus {
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $blue-light;
+    }
+
+    &:active {
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25), inset 20rem 0 0 0 $blue-light;
+    }
+}
+
+
 blockquote {
     display: flex;
     flex-direction: column;
